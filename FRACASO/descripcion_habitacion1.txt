@@ -1,0 +1,39 @@
+# Descripcion de la habitacion
+
+Estas en una cueva oscura y vacia. Esta muy humedo aqui adentro y hace frio.
+Necesitas encontrar algo con lo que calentarte, o vas a morir de frio.
+
+# Descripcion de que hay en la cueva
+
+La salida esta bloqueada debido a un derrumbe. Necesitaras algo para salir
+de aqui, o encontrar una salida alterna...
+
+Hay un grupo de piedras sospechosas, restos de lo que podria ser un
+naufragio, y un animal chistoso.
+
+La oscuridad ha consumido lo que antes pudo ser el refugio de algunos
+animales. No sabes como has terminado aqui, solo despertaste despues de
+tener un sueño extraño.
+
+# Descripcion piedras sospechosas
+
+Son un monton de rocas, que esperabas.
+Espera, hay algo aqui.
+Encontraste un pedazo de tela.
+
+Son solo un montón de piedras, y esta vez ya no tienen nada interesante.
+
+# Descripcion naufragio
+
+Un barco naufragado reposa en un pequeño estanque en el interior de la cueva.
+¿Cómo llego aquí? No tienes la menor idea, pero quizas haya algo mas
+adentro...
+
+Ya no hay nada mas interesante adentro del barco.
+
+# Descripcion animal
+
+No sabes si lo que tienes enfrente es un pez, un cerdo o una rana. Lo cierto
+es que te da un poco de cosa la manera en la que te esta mirando. Aunque
+ahora que te fijas bien, tiene un papel agarrado en su... ¿pico? Lo que sea,
+pero quizas deberias tomarlo.

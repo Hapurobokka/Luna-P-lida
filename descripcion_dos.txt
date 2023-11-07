@@ -1,0 +1,25 @@
+# Descripción cristal
+
+Lo primero que notas es la gran puerta dorada, la cual tiene una especie de
+agujero donde se puede insertar algo. A su lado, se encuentra una inscripción
+en un lenguaje que no conoces, pero de alguna manera, puedes entender.
+
+"Para abrir la puerta, debes encontrar el simbolo que representa el equilibrio
+de la vida y la muerte."
+
+Hay al menos unos cuatro pasillos que nacen de esta habitación. Quizás deberias
+comenzar a inspeccionar en ellos.
+
+Podrias intentar MOVERTE a la PRIMERA, SEGUNDA, TERCERA, o CUARTA habitación.
+
+# Descripción buceo
+
+El suelo de esta habitación ha colapsado.
+
+Lo que sea que pudo haber aquí cayo hasta el fondo de una fosa llena de agua.
+No se ve muy profunda, pero si vas a entrar en ella, deberas cuidar muy bien que
+es lo que vas a hacer.
+
+(Para bucear, usa el comando BUCEAR. Cuando quieras regresar a la superficie,
+usa el comando EMERGER)
+
