@@ -101,14 +101,17 @@ def cueva_submarina(inventario):
         print("Comando no reconocido")
 
 
+# Invenvatario del jugador, inicializado vacio
 inventario = []
 
-
+# Variable que determina el final del juego
 juego_terminado = False
 
+# Variables que determinan el final de las habitaciones
 cueva_terminada = False
 laberinto_terminado = False
 
+# Bucle que hace que continue el juego
 while not juego_terminado:
     if not cueva_terminada:
         cueva_submarina(inventario)
