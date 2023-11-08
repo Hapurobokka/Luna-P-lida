@@ -12,6 +12,36 @@ comenzar a inspeccionar en ellos.
 
 Podrias intentar MOVERTE a la PRIMERA, SEGUNDA, TERCERA, o CUARTA habitación.
 
+Hay otras cosas que ver por aqui.
+
+RESTOS EXTRAÑOS descansan al lado de la puerta, tal vez contengan una pista.
+Tambien hay un MURAL que te llama mucho la atención, pues sientes que tambien
+eres capaz de entenderlo.
+
+En cualquier caso, deberias tratar de INSPECCIONARLOS.
+
+# Descripción RESTOS EXTRAÑOS
+
+Con la potente iluminación es imposible que ese bulto pueda esconderse de ti.
+Cubierto con una extraña tela, el cadaver de una mujer con ropajes exoticos te
+devuelve una hueca mirada.
+
+Su carne podrida y su apestoso olor te provocan nauseas, tus ojos lloran un 
+poco. Pero despues de recuperarte del shock, te das cuenta de que ella tiene
+en su mano izquiera una especie de MONOCULO RARO, el cual tiene su lente hecha
+del mismo cristal que ahora te alumbra. 
+
+Quizás deberias RECOGERLO.
+
+# Descripción MURAL
+
+Un mural que simboliza a un grupo de seres humanos sellando a una legión de
+serpientes bajo tierra. A pesar de que se parecen mucho a los esclavos que
+has visto en venta en las ciudades, cuentan con una tecnología extraña que
+no sabrias describir.
+
+Algo te dice que no deberias estar viendo esto.
+
 # Descripción buceo
 
 El suelo de esta habitación ha colapsado.
@@ -22,4 +52,3 @@ es lo que vas a hacer.
 
 (Para bucear, usa el comando BUCEAR. Cuando quieras regresar a la superficie,
 usa el comando EMERGER)
-

@@ -32,6 +32,12 @@ def laberinto_oculto(inventario):
     # Invoca la descripción de los elementos de las habitacion(es)
     elif clave == "inspeccionar":
         c2.inspecciones(cadena, inventario)
+    
+    elif clave == "recoger":
+        c2.recolecciones(cadena, inventario)
+    
+    elif clave in c2.claves_miscelaneas:
+        c2.miscelaneos(cadena, inventario)
 
     # Termina el programa
     elif clave == "terminar" and cadena == "programa":
@@ -91,7 +97,7 @@ def cueva_submarina(inventario):
 
     # Activar menu de trampas
     elif clave == "activar" and "trampas" in cadena:
-        t.control_trampas()
+        t.control_trampas(inventario)
     
     # Termina el programa
     elif clave == "terminar" and "programa" in cadena:
