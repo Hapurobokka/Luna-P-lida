@@ -1,7 +1,6 @@
-import comienzo as c0
 import control_uno as c1
 
-def control_trampas():
+def control_trampas(inventario):
     final = False
 
     while not final:
@@ -21,19 +20,19 @@ def control_trampas():
 
         match seleccion:
             case 1:
-                c0.inventario.append("Estatuilla de oro")
-                c1.objetos_cueva.remove("Estatuilla de oro")
+                inventario.append("Estatuilla de oro")
+                c1.d_lista["Objetos cueva"].remove("Estatuilla de oro")
             case 2:
-                c0.inventario.append("Trozo de tela")
-                c1.objetos_cueva.remove("Trozo de tela")
+                inventario.append("Trozo de tela")
+                c1.d_lista["Objetos cueva"].remove("Trozo de tela")
             case 3:
-                c0.inventario.append("Mapa de la Isla")
-                c1.objetos_cueva.remove("Mapa de la Isla")
+                inventario.append("Mapa de la Isla")
+                c1.d_lista["Objetos cueva"].remove("Mapa de la Isla")
             case 4:
-                c1.animal_furioso = False
+                c1.d_bool["Animal furioso"] = False
             case 5:
-                c1.pierna_herida = False
+                c1.d_bool["Pierna herida"] = False
             case 6:
-                c0.cueva_terminada = True
+                pass
             case 7:
                 final = True

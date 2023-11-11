@@ -37,7 +37,7 @@ def laberinto_oculto(inventario):
         c2.recolecciones(cadena, inventario)
     
     elif clave in c2.claves_miscelaneas:
-        c2.miscelaneos(cadena, inventario)
+        c2.miscelaneos(clave, cadena, inventario)
 
     # Termina el programa
     elif clave == "terminar" and cadena == "programa":
@@ -54,14 +54,14 @@ def cueva_submarina(inventario):
     global cueva_terminada
 
     # Esto muestra la descripción inicial de la cueva
-    if not c1.introduccion_cueva:
-        print(c1.inicio_cueva)
-        c1.introduccion_cueva = True
+    if not c1.d_bool["Introduccion cueva"]:
+        print(c1.d_texto["Inicio cueva"])
+        c1.d_bool["Introduccion cueva"] = True
 
     # Muestra el dialogo que indica el final de la cueva
-    if "Mapa de la Isla" in inventario and not c1.mensaje_mostrado:
-        print(c1.final_uno)
-        c1.mensaje_mostrado = True
+    if "Mapa de la Isla" in inventario and not c1.d_bool["Mensaje final"]:
+        print(c1.d_texto["Final cueva"])
+        c1.d_bool["Mensaje final"] = True
 
     # Recoge la acción del jugador
     accion = input("> ")
@@ -85,7 +85,7 @@ def cueva_submarina(inventario):
 
     # Revisa si la clave esta en la lista de claves miscelaneas, y si es True,
     # pasa la clave y la cadena para una posterior confirmación
-    elif clave in c1.claves_miscelaneas:
+    elif clave in c1.d_lista["Claves miscelaneas"]:
         c1.miscelaneos(clave, cadena, inventario)
 
     # En caso de ser True, permite terminar la seccion de la cueva
