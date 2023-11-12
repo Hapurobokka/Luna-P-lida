@@ -7,22 +7,22 @@ def inspecciones(cadena, inventario):
     match cadena:
         case "cueva":
             file.seek(21, 0)
-            for x in range(0, 16):
+            for _ in range(0, 16):
                 print(file.readline(), end="")
 
         case "balsa":
             file.seek(625, 0)
-            for x in range(0, 8):
+            for _ in range(0, 8):
                 print(file.readline(), end="")
 
         case "esqueleto":
             file.seek(1022, 0)
-            for x in range(0, 10):
+            for _ in range(0, 10):
                 print(file.readline(), end="")
 
         case "animal":
             file.seek(1441, 0)
-            for x in range(0, 7):
+            for _ in range(0, 7):
                 print(file.readline(), end="")
 
         case "inventario":

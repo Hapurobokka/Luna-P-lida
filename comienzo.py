@@ -10,9 +10,9 @@ def laberinto_oculto(inventario):
     """
 
     # Esto muestra la descripción inicial del laberinto
-    if not c2.introduccion_laberinto:
-        print(c2.inicio_laberinto)
-        c2.introduccion_laberinto = True
+    if not c2.l_bool["Introduccion laberinto"]:
+        print(c2.l_texto["Inicio laberinto"])
+        c2.l_bool["Introduccion laberinto"] = True
 
     # Recoge la acción del jugador
     accion = input("> ")
@@ -29,17 +29,15 @@ def laberinto_oculto(inventario):
     if clave == "moverse":
         c2.movimiento(cadena, inventario)
 
-    # Invoca la descripción de los elementos de las habitacion(es)
     elif clave == "inspeccionar":
         c2.inspecciones(cadena, inventario)
     
     elif clave == "recoger":
         c2.recolecciones(cadena, inventario)
     
-    elif clave in c2.claves_miscelaneas:
+    elif clave in c2.l_listas["Claves miscelaneas"]:
         c2.miscelaneos(clave, cadena, inventario)
 
-    # Termina el programa
     elif clave == "terminar" and cadena == "programa":
         exit(0)
 
@@ -74,22 +72,16 @@ def cueva_submarina(inventario):
         print("Escribelo bien wey")
         return
 
-    # Invoca las descripciones de los elementos de la habitación
     if clave == "inspeccionar":
         c1.inspecciones(cadena, inventario)
 
-    # Elimina los objetos del inventario de la habitación y lo añade al del
-    # jugador
     elif clave == "recoger":
         c1.recolecciones(cadena, inventario)
 
-    # Revisa si la clave esta en la lista de claves miscelaneas, y si es True,
-    # pasa la clave y la cadena para una posterior confirmación
     elif clave in c1.d_lista["Claves miscelaneas"]:
         c1.miscelaneos(clave, cadena, inventario)
 
-    # En caso de ser True, permite terminar la seccion de la cueva
-    elif clave == "moverse" and "salida":
+    elif clave == "moverse" and "salida" in cadena:
         if "Mapa de la Isla" in inventario:
             cueva_terminada = True
         else:
@@ -99,7 +91,6 @@ def cueva_submarina(inventario):
     elif clave == "activar" and "trampas" in cadena:
         t.control_trampas(inventario)
     
-    # Termina el programa
     elif clave == "terminar" and "programa" in cadena:
         exit(0)
     
