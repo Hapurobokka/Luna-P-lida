@@ -105,9 +105,10 @@ d_lista = {
     # Lista de claves miscelaneas
     "Claves miscelaneas": ["vendar", "asustar"],
     # Objetos
-    "Objetos cueva": ["Estatuilla de oro", 
-                            "Trozo de tela", 
-                            "Mapa de la Isla"]
+    "Objetos cueva": [
+        "Estatuilla de oro", 
+        "Trozo de tela", 
+        "Mapa de la Isla"]
 }
 
 d_bool = {
