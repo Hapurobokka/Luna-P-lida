@@ -43,8 +43,8 @@ def inspecciones(cadena, inventario):
 
         case "primera":
             if "habitacion" in cadena:
-                file.seek(853)
-                for _ in range(0, 10):
+                file.seek(1696)
+                for _ in range(0, 11):
                     print(file.readline(), end="")
             else:
                 print("¿Qué estas mirando?")
@@ -93,6 +93,7 @@ def bucear(inventario):
             print(l_texto["Buceo cadaver"])
         elif accion == "inspeccionar dorado":
             print(l_texto["Buceo dorado"])
+
         elif accion == "emerger":
             print("Sales inmediatamente a la superficie")
             break
@@ -108,12 +109,29 @@ def bucear(inventario):
         oxigeno = oxigeno - 1
 
         if oxigeno == 0:
-            print("¡Necesitas repirar! Sales inmediatamente a la superficie.")
+            print("¡Necesitas repirar! Sales inmediatamente a la superficie\n.")
             break
 
 def tablillas():
+    comprobacion = 0
     comb = input("Introduce la combinación\n>   ")
-    print(comb)
+    # La combinacion es hasaf racta
+    comb = comb.upper()
+    comb1, comb2 = comb.split(" ", 1)
+    for x in l_listas["Tablilla 1"]:
+        for y in comb1:
+            if y in x:
+                comprobacion += 1
+    for x in l_listas["Tablilla 2"]:
+        for y in comb2:
+            if y in x:
+                comprobacion += 1    
+    
+    if comprobacion >= 10:
+        print("Codigo correcto")
+    else:
+        print("O lo escribiste mal o la cagaste")
+
     print("Esto es todo lo que hace esta función xd")
 
 
@@ -122,9 +140,23 @@ posicion = "centro"
 l_listas = {
     "Claves miscelaneas": ["bucear"],
     "Objetos laberinto": [
-                        "Monoculo raro",
-                        "Colgante con forma de ojo"
-                        ]
+        "Monoculo raro",
+        "Colgante con forma de ojo"
+    ],
+    "Tablilla 1": [
+        ["H", "B", "W", "S", "F"],
+        ["F", "A", "O", "S", "M"],
+        ["S", "F", "W", "N", "M"],
+        ["D", "A", "M", "L", "C"],
+        ["C", "O", "I", "F", "N"]
+    ],
+    "Tablilla 2": [
+        ["I", "R", "A", "M", "S"],
+        ["M", "S", "L", "A", "S"],
+        ["C", "F", "W", "S", "E"],
+        ["N", "W", "E", "T", "N"],
+        ["L", "X", "A", "B", "Z"]
+    ]
 }
 
 l_bool = {
@@ -198,8 +230,8 @@ Dos tablillas de piedra descansan hasta el fondo de la fosa.
 
 A B W S F   I S A M S
 F S O S M   M S L W S
-S F W S M   K F W S I
-D K M L C   N W E A N
+S F W S M   K F W S E
+D A M L C   N W E A N
 C O I F N   L X C B Z
 
 Parece que puedes pulsar algunos de los simbolos, uno por cada fila.
