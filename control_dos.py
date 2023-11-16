@@ -74,10 +74,7 @@ def miscelaneos(clave, cadena, inventario):
 
 
 def bucear(inventario):
-
     oxigeno = 3
-    llave_encontrada = False
-    tesoro_obtenido = False
 
     print(l_texto["Inicio buceo"])
 
@@ -88,7 +85,10 @@ def bucear(inventario):
             print(l_texto["Buceo coral"])
         elif accion == "inspeccionar tablilla":
             print(l_texto["Buceo tablillas"])
-            tablillas()
+            if "Llave calavera" in l_listas["Objetos laberinto"]:
+                tablillas(inventario)
+            else:
+                print("Ya tienes la llave, ¿qué más quieres?")
         elif accion == "inspeccionar cadaver":
             print(l_texto["Buceo cadaver"])
         elif accion == "inspeccionar dorado":
@@ -112,23 +112,15 @@ def bucear(inventario):
             print("¡Necesitas repirar! Sales inmediatamente a la superficie\n.")
             break
 
-def tablillas():
-    comprobacion = 0
+def tablillas(inventario):
     comb = input("Introduce la combinación\n>   ")
     # La combinacion es hasaf racta
-    comb = comb.upper()
     comb1, comb2 = comb.split(" ", 1)
-    for x in l_listas["Tablilla 1"]:
-        for y in comb1:
-            if y in x:
-                comprobacion += 1
-    for x in l_listas["Tablilla 2"]:
-        for y in comb2:
-            if y in x:
-                comprobacion += 1    
-    
-    if comprobacion >= 10:
+   
+    if comb1 == l_listas["Tablilla 1"] and comb2 == l_listas["Tablilla 2"]:
         print("Codigo correcto")
+        inventario.append("Llave calavera")
+        l_listas["Objetos laberinto"].remove("Llave calavera")
     else:
         print("O lo escribiste mal o la cagaste")
 
@@ -141,22 +133,12 @@ l_listas = {
     "Claves miscelaneas": ["bucear"],
     "Objetos laberinto": [
         "Monoculo raro",
-        "Colgante con forma de ojo"
+        "Colgante con forma de ojo",
+        "Llave calavera",
+        "Emblema calavera"
     ],
-    "Tablilla 1": [
-        ["H", "B", "W", "S", "F"],
-        ["F", "A", "O", "S", "M"],
-        ["S", "F", "W", "N", "M"],
-        ["D", "A", "M", "L", "C"],
-        ["C", "O", "I", "F", "N"]
-    ],
-    "Tablilla 2": [
-        ["I", "R", "A", "M", "S"],
-        ["M", "S", "L", "A", "S"],
-        ["C", "F", "W", "S", "E"],
-        ["N", "W", "E", "T", "N"],
-        ["L", "X", "A", "B", "Z"]
-    ]
+    "Tablilla 1": "hasaf",
+    "Tablilla 2": "racta"
 }
 
 l_bool = {
@@ -228,11 +210,11 @@ Recuerdas a tu capitan sujetando un pedazo de roca similar al coral.
     "Buceo tablillas": """
 Dos tablillas de piedra descansan hasta el fondo de la fosa.
 
-A B W S F   I S A M S
-F S O S M   M S L W S
-S F W S M   K F W S E
-D A M L C   N W E A N
-C O I F N   L X C B Z
+H B W S F   I R A M S
+F A O S M   M S L A S
+S F W N M   C F W S E
+D A M L C   N W E T N
+C O I F N   L X A B Z
 
 Parece que puedes pulsar algunos de los simbolos, uno por cada fila.
 Podrias intentar escribir algo con ellas.
