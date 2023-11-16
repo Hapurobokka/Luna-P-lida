@@ -10,9 +10,9 @@ def laberinto_oculto(inventario):
     """
 
     # Esto muestra la descripción inicial del laberinto
-    if not c2.l_bool["Introduccion laberinto"]:
+    if not c2.introduccion_laberinto:
         print(c2.l_texto["Inicio laberinto"])
-        c2.l_bool["Introduccion laberinto"] = True
+        c2.introduccion_laberinto = True
 
     # Recoge la acción del jugador
     accion = input("> ")
@@ -25,8 +25,13 @@ def laberinto_oculto(inventario):
         print("Escribelo bien wey")
         return
 
+    print(clave, cadena)
+
     # Cambia la posición del jugador
-    if clave == "moverse":
+    if clave in c2.claves_misc:
+        c2.miscelaneos(clave, cadena, inventario)
+
+    elif clave == "moverse":
         c2.movimiento(cadena, inventario)
 
     elif clave == "inspeccionar":
@@ -34,10 +39,7 @@ def laberinto_oculto(inventario):
     
     elif clave == "recoger":
         c2.recolecciones(cadena, inventario)
-    
-    elif clave in c2.l_listas["Claves miscelaneas"]:
-        c2.miscelaneos(clave, cadena, inventario)
-
+  
     elif clave == "terminar" and cadena == "programa":
         exit(0)
 

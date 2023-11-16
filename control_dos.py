@@ -22,55 +22,58 @@ def movimiento(cadena, inventario):
 
 def inspecciones(cadena, inventario):
 
-    file = open("descripcion_dos.txt", "r")
-
-    match posicion:
-        case "centro":
+    with open("descripcion_dos.txt", "r") as file:
+        if posicion == "centro":
             if "habitacion" in cadena:
-                file.seek(23)
-                for _ in range(0, 21):
-                    print(file.readline(), end="") 
+               imprimir_descripcion(file, 23, 21)
             elif "restos" in cadena:
-                file.seek(860)
-                for _ in range(0, 12):
-                    print(file.readline(), end="")
+                imprimir_descripcion(file, 860, 12)
             elif "mural" in cadena:
-                file.seek(1339)
-                for _ in range(0, 11):
-                    print(file.readline(), end="")
+                imprimir_descripcion(file, 1339, 11)
+            elif "inventario" in cadena:
+                imprimir_inventario(inventario)
             else:
                 print("¿Qué estas mirando?")
+ 
 
-        case "primera":
+        elif posicion == "primera":
             if "habitacion" in cadena:
-                file.seek(1696)
-                for _ in range(0, 11):
-                    print(file.readline(), end="")
+                imprimir_descripcion(file, 1696, 11)
+            elif "inventario" in cadena:
+                imprimir_inventario(inventario)
             else:
                 print("¿Qué estas mirando?")
 
-    file.close()
+
+def imprimir_descripcion(file, inicio, cantidad):
+    file.seek(inicio)
+    for _ in range(cantidad):
+        print(file.readline(), end="")
+
+
+def imprimir_inventario(inventario):
+    for objeto in inventario:
+        print(" - ", objeto)
 
 
 def recolecciones(cadena, inventario):
 
-    match posicion:
-        case "centro":
-            if "monoculo" in cadena and "Monoculo raro" in l_listas[
-            "Objetos laberinto"]:
-                print(l_texto["Descripcion monoculo"])
-                inventario.append("Monoculo raro")
-                l_listas["Objetos laberinto"].remove("Monoculo raro")
-            else:
-                print("Eso ya lo recogiste")
+    if posicion == "centro":
+        if cadena == "monoculo" and "Monoculo raro" in objetos_lab:
+            print(l_texto["Descripcion monoculo"])
+            inventario.append("Monoculo raro")
+            objetos_lab.remove("Monoculo raro")
+        else:
+            print("Eso ya lo recogiste")
 
 
 def miscelaneos(clave, cadena, inventario):
 
-    match posicion:
-        case "primera":
-            if clave == "bucear":
-                bucear(inventario)
+    if posicion == "primera":
+        if clave == "bucear":
+            bucear(inventario)
+    else:
+        print("¿Que tratas de hacer?")
 
 
 def bucear(inventario):
@@ -85,7 +88,7 @@ def bucear(inventario):
             print(l_texto["Buceo coral"])
         elif accion == "inspeccionar tablilla":
             print(l_texto["Buceo tablillas"])
-            if "Llave calavera" in l_listas["Objetos laberinto"]:
+            if "Llave calavera" in objetos_lab:
                 tablillas(inventario)
             else:
                 print("Ya tienes la llave, ¿qué más quieres?")
@@ -99,9 +102,9 @@ def bucear(inventario):
             break
 
         elif accion == "recoger colgante":
-            print(l_texto["Descripcion colgante"])
-            inventario.append("Colgante con forma de ojo")
-            l_listas["Objetos laberinto"].remove("Colgante con forma de ojo")
+                print(l_texto["Descripcion colgante"])
+                inventario.append("Colgante con forma de ojo")
+                objetos_lab.remove("Colgante con forma de ojo")
 
         else:
             print("No deberias gastar tu aire en cosas que no estan aqui")
@@ -117,10 +120,10 @@ def tablillas(inventario):
     # La combinacion es hasaf racta
     comb1, comb2 = comb.split(" ", 1)
    
-    if comb1 == l_listas["Tablilla 1"] and comb2 == l_listas["Tablilla 2"]:
+    if comb1 == tab_1 and comb2 == tab_2:
         print("Codigo correcto")
         inventario.append("Llave calavera")
-        l_listas["Objetos laberinto"].remove("Llave calavera")
+        objetos_lab.remove("Llave calavera")
     else:
         print("O lo escribiste mal o la cagaste")
 
@@ -129,21 +132,17 @@ def tablillas(inventario):
 
 posicion = "centro"
 
-l_listas = {
-    "Claves miscelaneas": ["bucear"],
-    "Objetos laberinto": [
-        "Monoculo raro",
-        "Colgante con forma de ojo",
-        "Llave calavera",
-        "Emblema calavera"
-    ],
-    "Tablilla 1": "hasaf",
-    "Tablilla 2": "racta"
-}
+claves_misc = ["bucear"]
+objetos_lab = [
+    "Monoculo raro",
+    "Colgante con forma de ojo",
+    "Llave calavera",
+    "Emblema calavera"
+]
+tab_1 = "hasaf"
+tab_2 = "racta"
 
-l_bool = {
-    "Introduccion laberinto": False
-}
+introduccion_laberinto = False
 
 l_texto = {
     "Inicio laberinto": """
