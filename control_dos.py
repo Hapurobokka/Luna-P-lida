@@ -59,7 +59,7 @@ def imprimir_inventario(inventario):
 def recolecciones(cadena, inventario):
 
     if posicion == "centro":
-        if cadena == "monoculo" and "Monoculo raro" in objetos_lab:
+        if "monoculo" in cadena and "Monoculo raro" in objetos_lab:
             print(l_texto["Descripcion monoculo"])
             inventario.append("Monoculo raro")
             objetos_lab.remove("Monoculo raro")
@@ -97,14 +97,23 @@ def bucear(inventario):
         elif accion == "inspeccionar dorado":
             print(l_texto["Buceo dorado"])
 
-        elif accion == "emerger":
-            print("Sales inmediatamente a la superficie")
-            break
-
         elif accion == "recoger colgante":
                 print(l_texto["Descripcion colgante"])
                 inventario.append("Colgante con forma de ojo")
                 objetos_lab.remove("Colgante con forma de ojo")
+
+        elif accion == "abrir dorado":
+            if "Llave calavera" in inventario:
+                print(l_texto["Descripcion emblema calavera"])
+                inventario.append("Emblema calavera")
+                objetos_lab.remove("Emblema calavera")
+                objetos_lab.remove("Llave calavera")
+            else:
+                print("Ya tomaste todo lo que habia aqui.")
+
+        elif accion == "emerger":
+            print("Sales inmediatamente a la superficie")
+            break
 
         else:
             print("No deberias gastar tu aire en cosas que no estan aqui")
@@ -115,19 +124,19 @@ def bucear(inventario):
             print("¡Necesitas repirar! Sales inmediatamente a la superficie\n.")
             break
 
+
 def tablillas(inventario):
     comb = input("Introduce la combinación\n>   ")
     # La combinacion es hasaf racta
     comb1, comb2 = comb.split(" ", 1)
    
     if comb1 == tab_1 and comb2 == tab_2:
-        print("Codigo correcto")
+        print(l_texto["Descripcion llave"])
         inventario.append("Llave calavera")
         objetos_lab.remove("Llave calavera")
+        return
     else:
-        print("O lo escribiste mal o la cagaste")
-
-    print("Esto es todo lo que hace esta función xd")
+        return print("No paso nada. Tal vez te equivocaste.")
 
 
 posicion = "centro"
@@ -183,6 +192,19 @@ Jurarias haber visto la forma de ese ojo antes...
 Un poco perturbado, te llevas el collar contigo.
     """,
 
+    "Descripcion llave": """
+Una de las tablillas se abre como una pequeña puerta, revelando lo que parece
+ser una muy cuidada llave con forma de calavera.
+
+¿Quizás abre algo importante?
+    """,
+
+    "Descripcion emblema calavera": """
+Un emblema con forma de calavera.
+
+Tal vez sirva para activar un mecanismo importante...
+    """,
+
     "Inicio buceo": """
 El agua es extremadamente fria al tacto, y resulta que si es mucho mas profunda
 de lo que esperabas. 
@@ -235,5 +257,7 @@ Una placa dorada esta incrustada en la pared de la fosa. Sus hermosos relieves
 hechos en oro no parecen haber envejecido un solo día.
 
 Notas una pequeña ranura para insertar algo en ella. ¿Quizás una llave?
+
+Tal vez se pueda ABRIR.
     """
 }
