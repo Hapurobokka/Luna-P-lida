@@ -29,7 +29,7 @@ def inspecciones(cadena, inventario):
             elif "restos" in cadena:
                 imprimir_descripcion(file, 860, 12)
             elif "mural" in cadena:
-                imprimir_descripcion(file, 1339, 11)
+                imprimir_descripcion(file, 1372, 10)
             elif "inventario" in cadena:
                 imprimir_inventario(inventario)
             else:
@@ -43,6 +43,9 @@ def inspecciones(cadena, inventario):
                 imprimir_inventario(inventario)
             else:
                 print("¿Qué estas mirando?")
+
+        elif posicion == "segunda":
+            pass
 
 
 def imprimir_descripcion(file, inicio, cantidad):
