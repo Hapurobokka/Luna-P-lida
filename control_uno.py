@@ -1,78 +1,68 @@
 from sys import exit
 
 def inspecciones(cadena, inventario):
+    with open("descripcion_uno.txt", "r") as file:
+        if cadena == "cueva":
+            imprimir_descripcion(file, 21, 16)
 
-    file = open("descripcion_uno.txt", "r")
+        elif cadena == "balsa":
+            imprimir_descripcion(file, 625, 8)
 
-    match cadena:
-        case "cueva":
-            file.seek(21, 0)
-            for _ in range(0, 16):
-                print(file.readline(), end="")
+        elif cadena == "esqueleto":
+            imprimir_descripcion(file, 1022, 10)
 
-        case "balsa":
-            file.seek(625, 0)
-            for _ in range(0, 8):
-                print(file.readline(), end="")
+        elif cadena == "animal":
+            imprimir_descripcion(file, 1441, 7)
 
-        case "esqueleto":
-            file.seek(1022, 0)
-            for _ in range(0, 10):
-                print(file.readline(), end="")
+        elif cadena == "inventario":
+            imprimir_inventario(inventario)
 
-        case "animal":
-            file.seek(1441, 0)
-            for _ in range(0, 7):
-                print(file.readline(), end="")
-
-        case "inventario":
-            print("\nTienes en tu inventario:")
-            for x in inventario:
-                print("-", x)
-            print("\n")
-
-        case _:
+        else:
             print("Comando no reconocido")
-        
-    file.close()
 
+def imprimir_descripcion(file, inicio, cantidad):
+    file.seek(inicio)
+    for _ in range(cantidad):
+        print(file.readline(), end="")
+
+def imprimir_inventario(inventario):
+    for objeto in inventario:
+        print(f" - {objeto}")
+        
 
 def recolecciones(cadena, inventario):
+    if cadena == "estatuilla":
+        if "Estatuilla de oro" in d_lista["Objetos cueva"]:
+            print(d_texto["Texto estatuilla"])
+            inventario.append("Estatuilla de oro")
+            d_lista["Objetos cueva"].remove("Estatuilla de oro")
+        else:
+            print("\nYa recogiste la estatuilla, merluzo\n")
 
-    match cadena:
-        case "estatuilla":
-            if "Estatuilla de oro" in d_lista["Objetos cueva"]:
-                print(d_texto["Texto estatuilla"])
-                inventario.append("Estatuilla de oro")
-                d_lista["Objetos cueva"].remove("Estatuilla de oro")
-            else:
-                print("\nYa recogiste la estatuilla, merluzo\n")
+    elif cadena == "tela" or cadena == "trozo de tela":
+        if "Trozo de tela" in d_lista["Objetos cueva"]:
+            print(d_texto["Texto tela"])
+            inventario.append("Trozo de tela")
+            d_lista["Objetos cueva"].remove("Trozo de tela")
+        else:
+            print("\nHay que tener respeto por los muertos.\n")          
 
-        case "tela" |  "trozo de tela":
-            if "Trozo de tela" in d_lista["Objetos cueva"]:
-                print(d_texto["Texto tela"])
-                inventario.append("Trozo de tela")
-                d_lista["Objetos cueva"].remove("Trozo de tela")
-            else:
-                print("\nHay que tener respeto por los muertos.\n")          
+    elif cadena == "papel" or cadena == "pedazo de papel":
+        if d_bool["Animal furioso"]:
+            print(d_texto["Texto furia"])
+        elif not d_bool["Animal furioso"] and "Mapa de la Isla" in d_lista[
+            "Objetos cueva"]:
+            print(d_texto["Texto papel"])
+            inventario.append("Mapa de la Isla")
+            d_lista["Objetos cueva"].remove("Mapa de la Isla")
+        else:
+            print("\nNo hay nada que tomar\n")
 
-        case "papel" |  "pedazo de papel":
-            if d_bool["Animal furioso"]:
-                print(d_texto["Texto furia"])
-            elif not d_bool["Animal furioso"] and "Mapa de la Isla" in d_lista[
-                "Objetos cueva"]:
-                print(d_texto["Texto papel"])
-                inventario.append("Mapa de la Isla")
-                d_lista["Objetos cueva"].remove("Mapa de la Isla")
-            else:
-                print("\nNo hay nada que tomar\n")
-
-        case _:
-            print("Comando no reconocido")
+    else:
+        print("Comando no reconocido")
 
 
 def miscelaneos(clave, cadena, inventario):
-
     requisitos_mapa = d_bool["Animal furioso"] and not d_bool["Pierna herida"] 
 
     if clave == "vendar" and "pierna" in cadena:

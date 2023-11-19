@@ -8,17 +8,12 @@ def laberinto_oculto(inventario):
     """
     Aqui va el contenido de la segunda habitación del juego
     """
-
-    # Esto muestra la descripción inicial del laberinto
     if not c2.introduccion_laberinto:
         print(c2.l_texto["Inicio laberinto"])
         c2.introduccion_laberinto = True
 
-    # Recoge la acción del jugador
     accion = input("> ")
 
-    # Dividimos la acción en la palabra "clave" y la "cadena" que brinda el 
-    # contexto
     try:
         clave, cadena = accion.split(" ", 1)
     except ValueError:
@@ -27,7 +22,6 @@ def laberinto_oculto(inventario):
 
     print(clave, cadena)
 
-    # Cambia la posición del jugador
     if clave in c2.claves_misc:
         c2.miscelaneos(clave, cadena, inventario)
 
@@ -53,21 +47,16 @@ def cueva_submarina(inventario):
     """
     global cueva_terminada
 
-    # Esto muestra la descripción inicial de la cueva
     if not c1.d_bool["Introduccion cueva"]:
         print(c1.d_texto["Inicio cueva"])
         c1.d_bool["Introduccion cueva"] = True
 
-    # Muestra el dialogo que indica el final de la cueva
     if "Mapa de la Isla" in inventario and not c1.d_bool["Mensaje final"]:
         print(c1.d_texto["Final cueva"])
         c1.d_bool["Mensaje final"] = True
 
-    # Recoge la acción del jugador
     accion = input("> ")
 
-    # Dividimos la acción en la palabra "clave" y la "cadena" que brinda el 
-    # contexto
     try:
         clave, cadena = accion.split(" ", 1)
     except ValueError:
@@ -100,17 +89,13 @@ def cueva_submarina(inventario):
         print("Comando no reconocido")
 
 
-# Invenvatario del jugador, inicializado vacio
 inventario = []
 
-# Variable que determina el final del juego
 juego_terminado = False
 
-# Variables que determinan el final de las habitaciones
 cueva_terminada = False
 laberinto_terminado = False
 
-# Bucle que hace que continue el juego
 while not juego_terminado:
     if not cueva_terminada:
         cueva_submarina(inventario)

@@ -21,31 +21,34 @@ def movimiento(cadena, inventario):
 
 
 def inspecciones(cadena, inventario):
-
-    with open("descripcion_dos.txt", "r") as file:
         if posicion == "centro":
-            if "habitacion" in cadena:
-               imprimir_descripcion(file, 23, 21)
-            elif "restos" in cadena:
-                imprimir_descripcion(file, 860, 12)
-            elif "mural" in cadena:
-                imprimir_descripcion(file, 1372, 10)
-            elif "inventario" in cadena:
-                imprimir_inventario(inventario)
-            else:
-                print("¿Qué estas mirando?")
- 
-
+            inspecciones_centro(cadena, inventario)
         elif posicion == "primera":
-            if "habitacion" in cadena:
-                imprimir_descripcion(file, 1696, 11)
-            elif "inventario" in cadena:
-                imprimir_inventario(inventario)
-            else:
-                print("¿Qué estas mirando?")
-
+            inspecciones_primera(cadena, inventario)
         elif posicion == "segunda":
             pass
+
+def inspecciones_centro(cadena, inventario):
+    with open("descripcion_dos.txt", "r") as file:
+        if "habitacion" in cadena:
+           imprimir_descripcion(file, 23, 21)
+        elif "restos" in cadena:
+            imprimir_descripcion(file, 860, 12)
+        elif "mural" in cadena:
+            imprimir_descripcion(file, 1372, 10)
+        elif "inventario" in cadena:
+            imprimir_inventario(inventario)
+        else:
+            print("¿Qué estas mirando?")
+       
+def inspecciones_primera(cadena, inventario):
+    with open("descripcion_dos.txt", "r") as file:
+        if "habitacion" in cadena:
+            imprimir_descripcion(file, 1696, 11)
+        elif "inventario" in cadena:
+            imprimir_inventario(inventario)
+        else:
+            print("¿Qué estas mirando?")
 
 
 def imprimir_descripcion(file, inicio, cantidad):
@@ -60,7 +63,6 @@ def imprimir_inventario(inventario):
 
 
 def recolecciones(cadena, inventario):
-
     if posicion == "centro":
         if "monoculo" in cadena and "Monoculo raro" in objetos_lab:
             print(l_texto["Descripcion monoculo"])
@@ -71,7 +73,6 @@ def recolecciones(cadena, inventario):
 
 
 def miscelaneos(clave, cadena, inventario):
-
     if posicion == "primera":
         if clave == "bucear":
             bucear(inventario)
@@ -86,40 +87,20 @@ def bucear(inventario):
 
     while True:
         accion = input("> ")
+        clave_b, cadena_b = accion.split(" ", 1)
 
-        if accion == "inspeccionar coral":
-            print(l_texto["Buceo coral"])
-        elif accion == "inspeccionar tablilla":
-            print(l_texto["Buceo tablillas"])
-            if "Llave calavera" in objetos_lab:
-                tablillas(inventario)
-            else:
-                print("Ya tienes la llave, ¿qué más quieres?")
-        elif accion == "inspeccionar cadaver":
-            print(l_texto["Buceo cadaver"])
-        elif accion == "inspeccionar dorado":
-            print(l_texto["Buceo dorado"])
+        if clave_b == "inspeccionar":
+            inspecciones_buceo(cadena_b, inventario)
 
-        elif accion == "recoger colgante":
-                print(l_texto["Descripcion colgante"])
-                inventario.append("Colgante con forma de ojo")
-                objetos_lab.remove("Colgante con forma de ojo")
+        elif clave_b == "recoger":
+            recolecciones_buceo(cadena_b, inventario)
 
-        elif accion == "abrir dorado":
-            if "Llave calavera" in inventario:
-                print(l_texto["Descripcion emblema calavera"])
-                inventario.append("Emblema calavera")
-                objetos_lab.remove("Emblema calavera")
-                objetos_lab.remove("Llave calavera")
-            else:
-                print("Ya tomaste todo lo que habia aqui.")
+        elif clave_b == "abrir":
+            apertura_dorado(cadena_b, inventario)
 
-        elif accion == "emerger":
+        elif clave_b == "emerger":
             print("Sales inmediatamente a la superficie")
             break
-
-        else:
-            print("No deberias gastar tu aire en cosas que no estan aqui")
 
         oxigeno = oxigeno - 1
 
@@ -127,6 +108,41 @@ def bucear(inventario):
             print("¡Necesitas repirar! Sales inmediatamente a la superficie\n.")
             break
 
+def inspecciones_buceo(cadena_b, inventario):
+    if cadena_b == "coral":
+        print(l_texto["Buceo coral"])
+    elif cadena_b == "tablilla" or cadena_b == "tablillas":
+        print(l_texto["Buceo tablillas"])
+        if "Llave calavera" in objetos_lab:
+            tablillas(inventario)
+        else:
+            print("Ya tienes la llave, ¿qué más quieres?")
+    elif cadena_b == "cadaver":
+        print(l_texto["Buceo cadaver"])
+    elif cadena_b == "dorado":
+        print(l_texto["Buceo dorado"])
+    else:
+        print("¿Qué estas mirando?")
+
+def recolecciones_buceo(cadena_b, inventario):
+    if cadena_b == "colgante":
+        print(l_texto["Descripcion colgante"])
+        inventario.append("Colgante con forma de ojo")
+        objetos_lab.remove("Colgante con forma de ojo")
+    else:
+        print("¿Qué tratas de recoger?")
+
+def apertura_dorado(cadena_b, inventario):
+    if cadena_b == "dorado":
+        if "Llave calavera" in inventario:
+            print(l_texto["Descripcion emblema calavera"])
+            inventario.append("Emblema calavera")
+            objetos_lab.remove("Emblema calavera")
+            inventario.remove("Llave calavera")
+        elif not "Llave calavera" in inventario and "Emblema calavera" in objetos_lab:
+            print("¿Y como lo vas a abrir?")
+        else:
+            print("Ya tomaste todo lo habia aqui.")
 
 def tablillas(inventario):
     comb = input("Introduce la combinación\n>   ")
