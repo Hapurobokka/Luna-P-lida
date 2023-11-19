@@ -20,14 +20,6 @@ def movimiento(cadena, inventario):
         print(l_texto["Corto cristal"])
 
 
-def inspecciones(cadena, inventario):
-        if posicion == "centro":
-            inspecciones_centro(cadena, inventario)
-        elif posicion == "primera":
-            inspecciones_primera(cadena, inventario)
-        elif posicion == "segunda":
-            pass
-
 def inspecciones_centro(cadena, inventario):
     with open("descripcion_dos.txt", "r") as file:
         if "habitacion" in cadena:
@@ -62,6 +54,15 @@ def imprimir_inventario(inventario):
         print(" - ", objeto)
 
 
+def inspecciones(cadena, inventario):
+        if posicion == "centro":
+            inspecciones_centro(cadena, inventario)
+        elif posicion == "primera":
+            inspecciones_primera(cadena, inventario)
+        elif posicion == "segunda":
+            pass
+
+
 def recolecciones(cadena, inventario):
     if posicion == "centro":
         if "monoculo" in cadena and "Monoculo raro" in objetos_lab:
@@ -79,34 +80,6 @@ def miscelaneos(clave, cadena, inventario):
     else:
         print("¿Que tratas de hacer?")
 
-
-def bucear(inventario):
-    oxigeno = 3
-
-    print(l_texto["Inicio buceo"])
-
-    while True:
-        accion = input("> ")
-        clave_b, cadena_b = accion.split(" ", 1)
-
-        if clave_b == "inspeccionar":
-            inspecciones_buceo(cadena_b, inventario)
-
-        elif clave_b == "recoger":
-            recolecciones_buceo(cadena_b, inventario)
-
-        elif clave_b == "abrir":
-            apertura_dorado(cadena_b, inventario)
-
-        elif clave_b == "emerger":
-            print("Sales inmediatamente a la superficie")
-            break
-
-        oxigeno = oxigeno - 1
-
-        if oxigeno == 0:
-            print("¡Necesitas repirar! Sales inmediatamente a la superficie\n.")
-            break
 
 def inspecciones_buceo(cadena_b, inventario):
     if cadena_b == "coral":
@@ -156,6 +129,34 @@ def tablillas(inventario):
         return
     else:
         return print("No paso nada. Tal vez te equivocaste.")
+
+def bucear(inventario):
+    oxigeno = 3
+
+    print(l_texto["Inicio buceo"])
+
+    while True:
+        accion = input("> ")
+        clave_b, cadena_b = accion.split(" ", 1)
+
+        if clave_b == "inspeccionar":
+            inspecciones_buceo(cadena_b, inventario)
+
+        elif clave_b == "recoger":
+            recolecciones_buceo(cadena_b, inventario)
+
+        elif clave_b == "abrir":
+            apertura_dorado(cadena_b, inventario)
+
+        elif clave_b == "emerger":
+            print("Sales inmediatamente a la superficie")
+            break
+
+        oxigeno = oxigeno - 1
+
+        if oxigeno == 0:
+            print("¡Necesitas repirar! Sales inmediatamente a la superficie\n.")
+            break
 
 
 posicion = "centro"

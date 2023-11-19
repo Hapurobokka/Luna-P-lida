@@ -1,5 +1,14 @@
 from sys import exit
 
+def imprimir_descripcion(file, inicio, cantidad):
+    file.seek(inicio)
+    for _ in range(cantidad):
+        print(file.readline(), end="")
+
+def imprimir_inventario(inventario):
+    for objeto in inventario:
+        print(f" - {objeto}")
+
 def inspecciones(cadena, inventario):
     with open("descripcion_uno.txt", "r") as file:
         if cadena == "cueva":
@@ -20,16 +29,7 @@ def inspecciones(cadena, inventario):
         else:
             print("Comando no reconocido")
 
-def imprimir_descripcion(file, inicio, cantidad):
-    file.seek(inicio)
-    for _ in range(cantidad):
-        print(file.readline(), end="")
-
-def imprimir_inventario(inventario):
-    for objeto in inventario:
-        print(f" - {objeto}")
         
-
 def recolecciones(cadena, inventario):
     if cadena == "estatuilla":
         if "Estatuilla de oro" in d_lista["Objetos cueva"]:
@@ -91,10 +91,9 @@ def miscelaneos(clave, cadena, inventario):
     else:
         print("Comando no reconocido")
 
+
 d_lista = {
-    # Lista de claves miscelaneas
     "Claves miscelaneas": ["vendar", "asustar"],
-    # Objetos
     "Objetos cueva": [
         "Estatuilla de oro", 
         "Trozo de tela", 
@@ -102,14 +101,12 @@ d_lista = {
 }
 
 d_bool = {
-    # Eventos
     "Introduccion cueva": False,
     "Mensaje final": False,
-    # Variables
+
     "Animal furioso": True,
     "Pierna herida": True,
 }
-    # Descripcion de objetos
 
 d_texto = {
     "Texto estatuilla": """
@@ -137,7 +134,6 @@ Sin embargo, su contenido te intriga. Apunta a una tal 'Isla de las Perdidas'.
 Un escalofrio recorre tu espalda, ¿acaso terminaste ahí?
 """,
 
-    # Descripciones de eventos
     "Inicio cueva": """
 Estas atrapado en una cueva.
 Tienes la pierna lastimada y esta sangrando mucho
