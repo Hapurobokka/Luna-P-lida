@@ -11,6 +11,7 @@ def movimiento(cadena, inventario):
 		print(l_texto["Corto buceo"])
 	elif "segunda" in cadena:
 		posicion = "segunda"
+		print(l_texto["Corto ruinas"])
 	elif "tercera" in cadena:
 		posicion = "tercera"
 	elif "cuarta" in cadena:
@@ -220,6 +221,10 @@ El brillo del cristal te sigue esperando en la habitación central.
 
 	"Corto buceo": """
 Un estanque azulado te da una tetrica bienvenida.
+""",
+
+	"Corto ruinas": """
+El silencio sepulcral de unas inmensas ruinas te saluda.
 """,
 
 	"Descripcion monoculo": """
