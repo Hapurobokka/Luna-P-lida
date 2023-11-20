@@ -18,21 +18,20 @@ def control_trampas(inventario):
 
         seleccion = int(input("> "))
 
-        match seleccion:
-            case 1:
-                inventario.append("Estatuilla de oro")
-                c1.d_lista["Objetos cueva"].remove("Estatuilla de oro")
-            case 2:
-                inventario.append("Trozo de tela")
-                c1.d_lista["Objetos cueva"].remove("Trozo de tela")
-            case 3:
-                inventario.append("Mapa de la Isla")
-                c1.d_lista["Objetos cueva"].remove("Mapa de la Isla")
-            case 4:
-                c1.d_bool["Animal furioso"] = False
-            case 5:
-                c1.d_bool["Pierna herida"] = False
-            case 6:
-                pass
-            case 7:
-                final = True
+        if seleccion == 1:
+            inventario.append("Estatuilla de oro")
+            c1.d_lista["Objetos cueva"].remove("Estatuilla de oro")
+        elif seleccion == 2:
+            inventario.append("Trozo de tela")
+            c1.d_lista["Objetos cueva"].remove("Trozo de tela")
+        elif seleccion == 3:
+            inventario.append("Mapa de la Isla")
+            c1.d_lista["Objetos cueva"].remove("Mapa de la Isla")
+        elif seleccion == 4:
+            c1.d_bool["Animal furioso"] = False
+        elif seleccion == 5:
+            c1.d_bool["Pierna herida"] = False
+        elif seleccion == 6:
+            c1.cueva_terminada = True
+        elif seleccion == 7:
+            final = True

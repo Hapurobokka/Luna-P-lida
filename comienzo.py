@@ -90,11 +90,8 @@ inventario = []
 
 juego_terminado = False
 
-cueva_terminada = False
-laberinto_terminado = False
-
 while not juego_terminado:
-	if not cueva_terminada:
+	if c1.cueva_terminada is False:
 		cueva_submarina(inventario)
-	elif not laberinto_terminado:
+	elif c2.laberinto_terminado is False:
 		laberinto_oculto(inventario)

@@ -1,11 +1,8 @@
 # Descripción cristal
 
 Lo primero que notas es la gran puerta dorada, la cual tiene una especie de
-agujero donde se puede insertar algo. A su lado, se encuentra una inscripción
-en un lenguaje que no conoces, pero de alguna manera, puedes entender.
-
-"Para abrir la puerta, debes encontrar el simbolo que representa el equilibrio
-de la vida y la muerte."
+agujero donde se puede insertar algo. A su lado, se encuentra una INSCRIPCIÓN 
+en un lenguaje que no conoces.
 
 Hay al menos unos cuatro pasillos que nacen de esta habitación. Quizás deberias
 comenzar a inspeccionar en ellos.
@@ -19,6 +16,11 @@ Tambien hay un MURAL que te llama mucho la atención, pues sientes que tambien
 eres capaz de entenderlo.
 
 En cualquier caso, deberias tratar de INSPECCIONARLOS.
+
+# Descripción INSCRIPCIÓN
+
+Unos glifos extraños cubren la puerta. Puede que digan algo importante, ¿pero
+como vas a DESCRIFRARLA? Tal vez haya un objeto que pueda ayudarte a hacerlo.
 
 # Descripción RESTOS EXTRAÑOS
 
@@ -52,4 +54,52 @@ es lo que vas a hacer.
 
 (Para bucear, usa el comando BUCEAR. Cuando quieras regresar a la superficie,
 usa el comando EMERGER)
+
+# Descripción Ruinas
+
+Pilares derrumbados y restos de lo que alguna vez fue una magnifica estructura
+llenan una amplia caverna. Entre las piedras desgastadas y los escombros
+dispersos, destaca una ESTATUA parcialmente conservada que representa figuras
+misteriosas y seres mitológicos en un baile eterno.
+
+Una fuerte brisa serpentea entre las GRIETAS de las paredes, llevando consigo
+una especie de historia oculta que casi sientes que puedes sostener con tus
+propias manos.
+
+# Descripcion ESTATUA
+
+Seres alados danzan en un torbellino rodeados por creaturas mitológicas, cada
+movimiento capturado con elegancia en la estática de la piedra.
+
+Uno de los seres alados, una hermosa mujer, sostiene algo en alto, iluminado
+debilmente por la luz que emite el cristal de la habitación del centro.
+
+Un craneo, un craneo que parece ser el que esta movilizando al resto de seres.
+
+# Descripción GRIETAS
+
+Las grietas en las paredes están marcadas por el paso inexorable del tiempo,
+serpenteando como arterias entrelazadas en la estructura de piedra. Aunque
+aparentemente comunes, algunas de estas grietas parecen divergir sutilmente de
+las otras, formando un patrón sutil que sigue una dirección particular.
+
+Entre estas grietas singulares, destaca una más ancha y profunda, pareciendo
+albergar un brillo casi imperceptible. Si se observa detenidamente, se percibe
+una tenue luminiscencia que emana de su interior, como si algo resplandeciera
+en las profundidades ocultas de la grieta. Esta LUZ apenas perceptible
+destella ocasionalmente, como una débil estrella atrapada en la oscuridad
+de la piedra antigua.
+
+Deberias ENTRAR a la LUZ.
+
+# Descripción luz
+
+La luz te daña los ojos por un instante, pero cuando consigues atravesarla,
+solo encuentras oscuridad.
+
+¿A donde se fue?
+
+Un pedestal yace en el centro de una muy pequeña habitación cuadrada. Parece
+llevar aqui, esperando a que se le COLOQUE algo encima. ¿Tendras algo que
+COLOCAR ahi?
 

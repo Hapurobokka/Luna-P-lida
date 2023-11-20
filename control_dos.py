@@ -23,24 +23,37 @@ def movimiento(cadena, inventario):
 def inspecciones_centro(cadena, inventario):
 	with open("descripcion_dos.txt", "r") as file:
 		if "habitacion" in cadena:
-		   imprimir_descripcion(file, 23, 21)
+			imprimir_descripcion(file, 23, 18)
+		elif "inscripcion" in cadena:
+			imprimir_descripcion(file, 712, 4)
 		elif "restos" in cadena:
-			imprimir_descripcion(file, 860, 12)
+			imprimir_descripcion(file, 904, 12)
 		elif "mural" in cadena:
-			imprimir_descripcion(file, 1372, 10)
+			imprimir_descripcion(file, 1417, 8)
 		elif "inventario" in cadena:
 			imprimir_inventario(inventario)
 		else:
 			print("¿Qué estas mirando?")
-	   
+
 def inspecciones_primera(cadena, inventario):
 	with open("descripcion_dos.txt", "r") as file:
 		if "habitacion" in cadena:
-			imprimir_descripcion(file, 1696, 11)
+			imprimir_descripcion(file, 1740, 11)
 		elif "inventario" in cadena:
 			imprimir_inventario(inventario)
 		else:
 			print("¿Qué estas mirando?")
+
+def inspecciones_segunda(cadena, inventario):
+	with open("descripcion_dos.txt", "r") as file:
+		if "habitacion" in cadena:
+			imprimir_descripcion(file, 2094, 10)
+		elif "estatua" in cadena:
+			imprimir_descripcion(file, 2571, 9)	
+		elif "grietas" in cadena:
+			imprimir_descripcion(file, 2971, 15)
+		elif "luz" in cadena:
+			imprimir_descripcion(file, 3729, 11)
 
 def imprimir_descripcion(file, inicio, cantidad):
 	file.seek(inicio)
@@ -57,7 +70,7 @@ def inspecciones(cadena, inventario):
 		elif posicion == "primera":
 			inspecciones_primera(cadena, inventario)
 		elif posicion == "segunda":
-			pass
+			inspecciones_segunda(cadena, inventario)
 
 
 def recolecciones(cadena, inventario):
@@ -71,9 +84,20 @@ def recolecciones(cadena, inventario):
 
 
 def miscelaneos(clave, cadena, inventario):
-	if posicion == "primera":
-		if clave == "bucear":
-			bucear(inventario)
+	if posicion == "centro" and clave == "descifrar":
+		if "Monoculo raro" in inventario:
+			print(l_texto["Inscripcion puerta"])
+		else:
+			print("¿Y como vas a hacer eso?")
+	elif posicion == "primera" and clave == "bucear":
+		bucear(inventario)
+	elif posicion == "segunda" and clave == "entrar":
+		inspecciones_segunda("luz", inventario)
+	elif posicion == "segunda" and clave == "colocar":
+		if "estatuilla" in cadena and "Estatuilla de oro" in inventario:
+			print(l_texto["Vision estatuilla"])
+		else:
+			print("Parece que el pedestal necesita algo mas.")
 	else:
 		print("¿Que tratas de hacer?")
 
@@ -109,7 +133,8 @@ def apertura_dorado(cadena_b, inventario):
 			inventario.append("Emblema calavera")
 			objetos_lab.remove("Emblema calavera")
 			inventario.remove("Llave calavera")
-		elif not "Llave calavera" in inventario and "Emblema calavera" in objetos_lab:
+		elif not ("Llave calavera" in inventario) and (
+			"Emblema calavera" in objetos_lab):
 			print("¿Y como lo vas a abrir?")
 		else:
 			print("Ya tomaste todo lo habia aqui.")
@@ -118,7 +143,7 @@ def tablillas(inventario):
 	comb = input("Introduce la combinación\n>   ")
 	# La combinacion es hasaf racta
 	comb1, comb2 = comb.split(" ", 1)
-   
+
 	if comb1 == tab_1 and comb2 == tab_2:
 		print(l_texto["Descripcion llave"])
 		inventario.append("Llave calavera")
@@ -160,9 +185,11 @@ def bucear(inventario):
 			break
 
 
+laberinto_terminado = False
+
 posicion = "centro"
 
-claves_misc = ["bucear"]
+claves_misc = ["bucear", "descifrar", "entrar", "colocar"]
 objetos_lab = [
 	"Monoculo raro",
 	"Colgante con forma de ojo",
@@ -224,6 +251,30 @@ ser una muy cuidada llave con forma de calavera.
 Un emblema con forma de calavera.
 
 Tal vez sirva para activar un mecanismo importante...
+	""",
+
+	"Inscripcion puerta": """
+A traves del monoculo raro, puedes descifrar la inscripción de la puerta:
+
+"Para abrir la puerta, debes encontrar el simbolo que representa el equilibrio
+de la vida y la muerte."
+
+Ahora tienes una pista de que debes hacer.
+	""",
+
+	"Vision estatuilla": """
+La tormenta lo esta devorando todo. Sus poderosos vientos arrancan las casas
+desde sus cimientos como si fueran hojas de arboles que salen volando ante la
+menor brisa. Tus hermanas siguen exigiendote que las acompañes para buscar un
+refugio, pero incluso en una situación de desastre, no puede abandonar tu
+oficio. 
+
+Como suma sacerdotisa del HASAF, tienes que velar por la seguridad de madre, y
+es por eso que incluso con el huracan debes encontrarla. Te diriges al interior
+del gran templo, y entonces...
+
+Despiertas despues de ese potente trance. ¿Qué fue eso? Sin embargo, se sintio
+demasiado cercano. Demasiado real... Recoges la estatuilla.
 	""",
 
 	"Inicio buceo": """

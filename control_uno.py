@@ -92,6 +92,8 @@ def miscelaneos(clave, cadena, inventario):
 		print("Comando no reconocido")
 
 
+cueva_terminada = False
+
 d_lista = {
 	"Claves miscelaneas": ["vendar", "asustar"],
 	"Objetos cueva": [
