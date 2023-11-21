@@ -17,7 +17,8 @@ def movimiento(cadena, inventario):
 		print(l_texto["Corto santuario"])
 	elif "cuarta" in cadena:
 		posicion = "cuarta"
-	elif "centro" in cadena: posicion = "centro"
+	elif "centro" in cadena:
+		posicion = "centro"
 		if "Emblema calavera" in inventario:
 			print(l_texto["Corto emblema calavera"])
 		else:

@@ -1,6 +1,6 @@
 import control_uno as c1
 import control_dos as c2
-import menu_trampas as t
+from menu_trampas import control_trampas
 
 from sys import exit
 
@@ -31,6 +31,9 @@ def laberinto_oculto(inventario):
 	
 	elif clave == "recoger":
 		c2.recolecciones(cadena, inventario)
+
+	elif clave == "activar" and cadena == "trampas":
+		control_trampas(inventario)
   
 	elif clave == "terminar" and cadena == "programa":
 		exit(0)
@@ -77,7 +80,7 @@ def cueva_submarina(inventario):
 			print("¿A donde vas a salir?")
 
 	elif clave == "activar" and "trampas" in cadena:
-		t.control_trampas(inventario)
+		control_trampas(inventario)
 	
 	elif clave == "terminar" and "programa" in cadena:
 		exit(0)
