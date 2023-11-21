@@ -14,6 +14,7 @@ def movimiento(cadena, inventario):
 		print(l_texto["Corto ruinas"])
 	elif "tercera" in cadena:
 		posicion = "tercera"
+		print(l_texto["Corto santuario"])
 	elif "cuarta" in cadena:
 		posicion = "cuarta"
 	elif "centro" in cadena:
@@ -55,6 +56,19 @@ def inspecciones_segunda(cadena, inventario):
 			imprimir_descripcion(file, 2971, 15)
 		elif "luz" in cadena:
 			imprimir_descripcion(file, 3729, 11)
+		elif "inventario" in cadena:
+			imprimir_inventario(inventario)
+
+def inspecciones_tercera(cadena, inventario):
+	with open("descripcion_dos.txt", "r") as file:
+		if "habitacion" in cadena:
+			imprimir_descripcion(file, 4046, 13)
+		elif "tapices" in cadena:
+			imprimir_descripcion(file, 4761, 9)
+		elif "fuente" in cadena:
+			imprimir_descripcion(file, 5453, 11)
+		elif "inventario" in cadena:
+			imprimir_inventario(inventario)
 
 def imprimir_descripcion(file, inicio, cantidad):
 	file.seek(inicio)
@@ -72,6 +86,8 @@ def inspecciones(cadena, inventario):
 			inspecciones_primera(cadena, inventario)
 		elif posicion == "segunda":
 			inspecciones_segunda(cadena, inventario)
+		elif posicion == "tercera":
+			inspecciones_tercera(cadena, inventario)
 
 
 def recolecciones(cadena, inventario):
@@ -86,7 +102,7 @@ def recolecciones(cadena, inventario):
 
 def miscelaneos(clave, cadena, inventario):
 	if posicion == "centro" and clave == "descifrar":
-		if "Monoculo raro" in inventario:
+		if "Monoculo raro" in inventario and "inscripcion" in cadena:
 			print(l_texto["Inscripcion puerta"])
 		else:
 			print("¿Y como vas a hacer eso?")
@@ -96,9 +112,19 @@ def miscelaneos(clave, cadena, inventario):
 		inspecciones_segunda("luz", inventario)
 	elif posicion == "segunda" and clave == "colocar":
 		if "estatuilla" in cadena and "Estatuilla de oro" in inventario:
-			print(l_texto["Vision estatuilla"])
+			print(l_texto["Vision estatuilla uno"])
 		else:
 			print("Parece que el pedestal necesita algo mas.")
+	elif posicion == "tercera" and clave == "colocar":
+		if "estatuilla" in cadena and "Estatuilla de oro" in inventario:
+			print(l_texto["Vision estatuilla dos"])
+		else:
+			print("Parece que el pedestal necesita algo mas.")
+	elif posicion == "tercera" and clave == "descifrar":
+		if "Monoculo raro" in inventario and "papeles" in cadena:
+			print(l_texto["Texto papeles"])
+		else:
+			print("¿Y como haras eso?")
 	else:
 		print("¿Que tratas de hacer?")
 
@@ -227,6 +253,10 @@ Un estanque azulado te da una tetrica bienvenida.
 El silencio sepulcral de unas inmensas ruinas te saluda.
 """,
 
+	"Corto santuario": """
+El rumor relajante del agua te indica que puedes bajar tu guardia un momento.
+	""",
+
 	"Descripcion monoculo": """
 Jamas habias tenido algo tan elegante en tus manos. O bueno, no de esta manera.
 Te cargaste a un riquillo o dos a lo largo de tus años en altamar, arrancando
@@ -267,7 +297,18 @@ de la vida y la muerte."
 Ahora tienes una pista de que debes hacer.
 	""",
 
-	"Vision estatuilla": """
+	"Texto papeles": """
+A traves del monoculo raro, el texto se vuelve comprensible:
+
+"He fallado. A todas. No fui capaz de encontrarla. Ni siquiera las paredes de
+este divino lugar pueden aliviar el peso que ahora se asienta en mi corazón.
+La magia de este lugar, siento que me esta llamando. En algún momento vendra
+por mi. Si alguien llega a encontrar mi cuerpo o este escrito, por favor
+vayase de aqui, porque ni siquiera yo, que me considero una experta en el
+HASAF RACTA, se que terminara pasando conmigo."
+	""",
+
+	"Vision estatuilla uno": """
 La tormenta lo esta devorando todo. Sus poderosos vientos arrancan las casas
 desde sus cimientos como si fueran hojas de arboles que salen volando ante la
 menor brisa. Tus hermanas siguen exigiendote que las acompañes para buscar un
@@ -277,6 +318,22 @@ oficio.
 Como suma sacerdotisa del HASAF, tienes que velar por la seguridad de madre, y
 es por eso que incluso con el huracan debes encontrarla. Te diriges al interior
 del gran templo, y entonces...
+
+Despiertas despues de ese potente trance. ¿Qué fue eso? Sin embargo, se sintio
+demasiado cercano. Demasiado real... Recoges la estatuilla.
+	""",
+
+	"Vision estatuilla dos": """
+La pequeña corona hecha de conchas marinas es colocada ceremonialmente en tu
+cabeza por la antigua suma sacerdotisa de la aldea. Por el ritual de la RACTA
+ahora tu seras su sucesora. Te arrodillas ante ella, y comienzas a recitar las
+palabras que desde tu niñez tienes grabadas a fuego en tu memoria. 
+
+Hoy te conviertes en la mujer mas importante de la aldea, con excepción de
+Madre, y ahora tienes que cuidar a todas tus hermanas como tu destino siempre
+te ha indicado.
+
+¿Pero estas satisfecha con eso?
 
 Despiertas despues de ese potente trance. ¿Qué fue eso? Sin embargo, se sintio
 demasiado cercano. Demasiado real... Recoges la estatuilla.

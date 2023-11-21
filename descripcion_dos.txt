@@ -103,3 +103,46 @@ Un pedestal yace en el centro de una muy pequeña habitación cuadrada. Parece
 llevar aqui, esperando a que se le COLOQUE algo encima. ¿Tendras algo que
 COLOCAR ahi?
 
+# Descripcion santuario
+
+Esta habitación se presenta como un santuario envejecido por el paso del tiempo.
+Los TAPICES que alguna vez fueron ricos en color ahora muestran señales de
+desgaste y desvanecimiento.
+
+Un pequeño ESCRITORIO tallado en piedra sigue en pie, a pesar de todo, y hay
+unos PAPELES desperdigados por su superficie.
+
+En un rincón, una pequeña FUENTE de agua sigue su ritmo constante, aunque su
+caudal es más sosegado, emitiendo un suave murmullo que se entremezcla con la
+quietud del ambiente. El sonido del agua, apenas audible, se convierte en una
+melodía tranquila que invita a la introspección y la relajación en este lugar
+gastado por el tiempo, pero impregnado de calma y serenidad.
+
+# Descripción TAPICES
+
+Los vivos colores de los que estaban hechos estos tapices han sido arrebatados
+por el paso del tiempo. Su ahora aspera superficie guarda la que pudo haber
+sido la sabiduría de una gran civilización. ¿Pero a ti que te importa?
+
+Eres solo un criminal tratando de sobrevivir. No es como si te fueran a salvar.
+Pero es... triste, pensar en lo que se pudo ir con ellos. ¿Por qué te esta
+poniendo esto tan melancolico?
+
+# Descripción ESCRITORIO
+
+Sorpredentemente, los papeles no se han desintegrado con los años. No entiendes
+ni una sola palabra de lo que hay escrito en ellos, pero se parece bastante al
+lenguaje que estaba escrito en la puerta que tratas de abrir.
+
+# Descripción FUENTE
+
+El sonido del agua se siente... relajante. Sereno y tranquilo, tienes muchas
+ganas de solo recostarte y descansar. Pero debes seguir adelante, algo te dice
+que en cualquier momento algo saldra de entre las grietas de este complejo e
+ira por ti. 
+
+Oculto entre la fuente, un PEDESTAL en el que puedes COLOCAR algo reposa, como
+esperando a que algo finalmente ocupo su lugar en el. 
+
+¿Tienes algo que poner ahí?
+
