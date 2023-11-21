@@ -17,9 +17,11 @@ def movimiento(cadena, inventario):
 		print(l_texto["Corto santuario"])
 	elif "cuarta" in cadena:
 		posicion = "cuarta"
-	elif "centro" in cadena:
-		posicion = "centro"
-		print(l_texto["Corto cristal"])
+	elif "centro" in cadena: posicion = "centro"
+		if "Emblema calavera" in inventario:
+			print(l_texto["Corto emblema calavera"])
+		else:
+			print(l_texto["Corto cristal"])
 
 
 def inspecciones_centro(cadena, inventario):
@@ -239,19 +241,24 @@ ojos.
 
 Hay mucho que INSPECCIONAR aqui, asi que deberias comenzar revisando la
 HABITACIÓN por completo.
-""",
+	""",
 
 	"Corto cristal": """
 El brillo del cristal te sigue esperando en la habitación central.
-""",
+	""",
+
+	"Corto emblema calavera": """
+El emblema calavera que cargas contigo brilla ligeramente cuando entras a la
+habitación central. Tal vez puedas COLOCARLO en alguna parte.
+	""",
 
 	"Corto buceo": """
 Un estanque azulado te da una tetrica bienvenida.
-""",
+	""",
 
 	"Corto ruinas": """
 El silencio sepulcral de unas inmensas ruinas te saluda.
-""",
+	""",
 
 	"Corto santuario": """
 El rumor relajante del agua te indica que puedes bajar tu guardia un momento.
@@ -265,7 +272,7 @@ de sus lisas y elegantes manos cosas igual de valiosas que estas.
 Sin embargo, las circunstancias son diferentes.
 
 Este monoculo puede que marque la diferencia entre la vida y la muerte.
-""",
+	""",
 
 	"Descripcion colgante": """
 Jurarias haber visto la forma de ese ojo antes...
