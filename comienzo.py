@@ -75,7 +75,7 @@ def cueva_submarina(inventario):
 
 	elif clave == "moverse" and "salida" in cadena:
 		if "Mapa de la Isla" in inventario:
-			cueva_terminada = True
+			c1.cueva_terminada = True
 		else:
 			print("¿A donde vas a salir?")
 
