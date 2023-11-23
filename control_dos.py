@@ -1,6 +1,6 @@
 from sys import exit
 
-def movimiento(cadena, inventario):
+def movimiento_lab(cadena, inventario):
 	global posicion
 
 	if posicion == cadena:
@@ -82,7 +82,7 @@ def imprimir_inventario(inventario):
 	for objeto in inventario:
 		print(" - ", objeto)
 
-def inspecciones(cadena, inventario):
+def inspecciones_lab(cadena, inventario):
 		if posicion == "centro":
 			inspecciones_centro(cadena, inventario)
 		elif posicion == "primera":
@@ -93,7 +93,7 @@ def inspecciones(cadena, inventario):
 			inspecciones_tercera(cadena, inventario)
 
 
-def recolecciones(cadena, inventario):
+def recolecciones_lab(cadena, inventario):
 	if posicion == "centro":
 		if "monoculo" in cadena and "Monoculo raro" in objetos_lab:
 			print(l_texto["Descripcion monoculo"])
@@ -103,7 +103,7 @@ def recolecciones(cadena, inventario):
 			print("Eso ya lo recogiste")
 
 
-def miscelaneos(clave, cadena, inventario):
+def miscelaneos_lab(clave, cadena, inventario):
 	if posicion == "centro" and clave == "descifrar":
 		if "Monoculo raro" in inventario and "inscripcion" in cadena:
 			print(l_texto["Inscripcion puerta"])

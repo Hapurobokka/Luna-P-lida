@@ -1,5 +1,14 @@
-import control_uno as c1
-import control_dos as c2
+from control_uno import d_lista, d_bool, cueva_terminada
+from control_dos import objetos_lab
+
+def obtener_input():
+	try:
+		variable = int(input())
+		return variable
+	except ValueError:
+		print("Solo numeros por favor")
+		return
+
 
 def trampas_uno(inventario):
 	while True:	
@@ -14,23 +23,23 @@ def trampas_uno(inventario):
 		print("6. Pasar al laberinto")
 		print("7. Terminar trampas")
 
-		seleccion = int(input())
+		seleccion = obtener_input()
 
 		if seleccion == 1:
 			inventario.append("Estatuilla de oro")
-			c1.d_lista["Objetos cueva"].remove("Estatuilla de oro")
+			d_lista["Objetos cueva"].remove("Estatuilla de oro")
 		elif seleccion == 2:
 			inventario.append("Trozo de tela")
-			c1.d_lista["Objetos cueva"].remove("Trozo de tela")
+			d_lista["Objetos cueva"].remove("Trozo de tela")
 		elif seleccion == 3:
 			inventario.append("Mapa de la Isla")
-			c1.d_lista["Objetos cueva"].remove("Mapa de la Isla")
+			d_lista["Objetos cueva"].remove("Mapa de la Isla")
 		elif seleccion == 4:
-			c1.d_bool["Animal furioso"] = False
+			d_bool["Animal furioso"] = False
 		elif seleccion == 5:
-			c1.d_bool["Pierna herida"] = False
+			d_bool["Pierna herida"] = False
 		elif seleccion == 6:
-			c1.cueva_terminada = True
+			cueva_terminada = True
 		elif seleccion == 7:
 			break
 
@@ -49,20 +58,20 @@ Objetos:
 5. Terminar trampas
 			""")
 
-		seleccion = int(input())
+		seleccion = obtener_input()
 
 		if seleccion == 1:
 			inventario.append("Monoculo raro")
-			c2.objetos_lab.remove("Monoculo raro")
+			objetos_lab.remove("Monoculo raro")
 		elif seleccion == 2:
 			inventario.append("Colgante con forma de ojo")
-			c2.objetos_lab.remove("Colgante con forma de ojo")
+			objetos_lab.remove("Colgante con forma de ojo")
 		elif seleccion == 3:
 			inventario.append("Llave calavera")
-			c2.objetos_lab.append("Llave calavera")
+			objetos_lab.append("Llave calavera")
 		elif seleccion == 4:
 			inventario.append("Emblema calavera")
-			c2.objetos_lab.remove("Emblema calavera")
+			objetos_lab.remove("Emblema calavera")
 		elif seleccion == 5:
 			break
 
@@ -72,10 +81,14 @@ def control_trampas(inventario):
 	print("Elija una habitación que trampear: ")
 	print("1. Cueva submarina")
 	print("2. Laberinto")
-	habitacion = int(input())
+
+	habitacion = obtener_input()
+
 	if habitacion == 1:
 		trampas_uno(inventario)
 	elif habitacion == 2:
 		trampas_dos(inventario)
+	else:
+		print("Ingresa un numero valido")
 
 	return

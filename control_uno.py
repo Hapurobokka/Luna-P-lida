@@ -9,7 +9,7 @@ def imprimir_inventario(inventario):
 	for objeto in inventario:
 		print(f" - {objeto}")
 
-def inspecciones(cadena, inventario):
+def inspecciones_cue(cadena, inventario):
 	with open("descripcion_uno.txt", "r") as file:
 		if cadena == "cueva":
 			imprimir_descripcion(file, 21, 16)
@@ -30,7 +30,7 @@ def inspecciones(cadena, inventario):
 			print("Comando no reconocido")
 
 		
-def recolecciones(cadena, inventario):
+def recolecciones_cue(cadena, inventario):
 	if cadena == "estatuilla":
 		if "Estatuilla de oro" in d_lista["Objetos cueva"]:
 			print(d_texto["Texto estatuilla"])
@@ -62,7 +62,7 @@ def recolecciones(cadena, inventario):
 		print("Comando no reconocido")
 
 
-def miscelaneos(clave, cadena, inventario):
+def miscelaneos_cue(clave, cadena, inventario):
 	requisitos_mapa = d_bool["Animal furioso"] and not d_bool["Pierna herida"] 
 
 	if clave == "vendar" and "pierna" in cadena:
