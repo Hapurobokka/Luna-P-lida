@@ -10,7 +10,8 @@ def obtener_input():
 		return
 
 
-def trampas_uno(inventario):
+def trampas_uno(inventario, cueva_terminada):
+
 	while True:	
 		print("Selecciona una variable para modificar: ")
 		print("Objetos:\n")
@@ -85,7 +86,7 @@ def control_trampas(inventario):
 	habitacion = obtener_input()
 
 	if habitacion == 1:
-		trampas_uno(inventario)
+		trampas_uno(inventario, cueva_terminada)
 	elif habitacion == 2:
 		trampas_dos(inventario)
 	else:
