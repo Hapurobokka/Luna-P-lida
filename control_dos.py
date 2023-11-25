@@ -3,9 +3,6 @@ from sys import exit
 def movimiento_lab(cadena, inventario):
 	global posicion
 
-	if "Emblema calavera" in inventario and posicion == "centro":
-		print(l_texto["Corto emblema calavera"])
-
 	match cadena:
 		case "primera":
 			posicion = "primera"	
@@ -27,6 +24,8 @@ def movimiento_lab(cadena, inventario):
 		case _:
 			print("¿A donde vas?")
 
+	if "Emblema calavera" in inventario and posicion == "centro":
+		print(l_texto["Corto emblema calavera"])
 
 def mostrar_alucionaciones():
 	file = open("descripcion_dos_2.txt", "r")
@@ -56,16 +55,16 @@ def inspecciones_centro(cadena, inventario):
 	match cadena:
 		case "habitacion":
 			imprimir_descripcion(file, 23, 18)
-		case "inscripcion":
+		case "inscripcion" | "inscripcion de la puerta":
 			imprimir_descripcion(file, 712, 4)
-		case "restos":
+		case "restos" | "restos extraños":
 			imprimir_descripcion(file, 904, 12)
 		case "mural":
 			imprimir_descripcion(file, 1417, 8)
 		case "inventario":
 			imprimir_inventario(inventario)
 		case _:
-			print("¿Qué esta haciendo?")
+			print("¿Qué estas mirando?")
 
 	file.close()
 
@@ -89,9 +88,9 @@ def inspecciones_segunda(cadena, inventario):
 		case "estatua":
 			imprimir_descripcion(file, 2571, 9)
 		case "grietas":
-			imprimir_descripcion(file, 2971, 9)
+			imprimir_descripcion(file, 2971, 15)
 		case "luz":
-			imprimir_descripcion(file, 3729, 11)
+			imprimir_descripcion(file, 3729, 10)
 		case "inventario":
 			imprimir_inventario(inventario)
 		case _:
@@ -106,6 +105,8 @@ def inspecciones_tercera(cadena, inventario):
 			imprimir_descripcion(file, 4046, 13)
 		case "tapices":
 			imprimir_descripcion(file, 4761, 9)
+		case "escritorio":
+			imprimir_descripcion(file, 5207, 5)
 		case "fuente":
 			imprimir_descripcion(file, 5453, 11)
 		case "inventario":
@@ -172,7 +173,12 @@ def descifrar_monoculo(cadena, inventario):
 
 def colocar_estatuilla(cadena, inventario):
 	file = open("descripcion_dos_2.txt", "r")
-	if not "Estatuilla" in cadena:
+	habitaciones_permitidas = ["segunda", "tercera"]
+
+	if not posicion in habitaciones_permitidas:
+		print("¿Qué estas haciendo?")
+		return
+	elif not "estatuilla" in cadena:
 		print("Parece que el pedestal necesita algo mas")
 		return
 	elif not "Estatuilla de oro" in inventario:
@@ -297,17 +303,21 @@ def bucear(inventario):
 			apertura_dorado(cadena_b, inventario)
 
 		elif clave_b == "emerger":
-			print("Sales inmediatamente a la superficie")
+			print("Sales inmediatamente a la superficie.")
 			posicion = "primera"
 			break
+
+		else:
+			print("Comando no reconocido")
 
 		oxigeno = oxigeno - 1
 
 		if oxigeno == 0:
-			print("¡Necesitas repirar! Sales inmediatamente a la superficie\n.")
+			print("¡Necesitas repirar! Sales inmediatamente a la superficie\n")
 			break
 
 	file.close()
+	return
 
 
 laberinto_terminado = False

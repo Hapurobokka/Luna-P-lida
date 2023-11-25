@@ -40,7 +40,7 @@ def laberinto_oculto(inventario):
 def cueva_submarina(inventario):
 	global cueva_terminada
 
-	condiciones_salida = "Mapa de la isla" in inventario
+	condiciones_salida = "Mapa de la Isla" in inventario
 
 	if not d_bool["Introduccion cueva"]:
 		print(d_texto["Inicio cueva"])
