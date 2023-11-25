@@ -1,0 +1,144 @@
+	"Descripcion monoculo": """
+Jamas habias tenido algo tan elegante en tus manos. O bueno, no de esta manera.
+Te cargaste a un riquillo o dos a lo largo de tus años en altamar, arrancando
+de sus lisas y elegantes manos cosas igual de valiosas que estas.
+
+Sin embargo, las circunstancias son diferentes.
+
+Este monoculo puede que marque la diferencia entre la vida y la muerte.
+	""",
+
+	"Descripcion colgante": """
+Jurarias haber visto la forma de ese ojo antes...
+
+¿Por qué subitamente todo esto se te hace tan familiar?
+
+Un poco perturbado, te llevas el collar contigo.
+	""",
+
+	"Descripcion llave": """
+Una de las tablillas se abre como una pequeña puerta, revelando lo que parece
+ser una muy cuidada llave con forma de calavera.
+
+¿Quizás abre algo importante?
+	""",
+
+	"Descripcion emblema calavera": """
+Un emblema con forma de calavera.
+
+Tal vez sirva para activar un mecanismo importante...
+	""",
+
+	"Inscripcion puerta": """
+A traves del monoculo raro, puedes descifrar la inscripción de la puerta:
+
+"Para abrir la puerta, debes encontrar el simbolo que representa el equilibrio
+de la vida y la muerte."
+
+Ahora tienes una pista de que debes hacer.
+	""",
+
+	"Texto papeles": """
+A traves del monoculo raro, el texto se vuelve comprensible:
+
+"He fallado. A todas. No fui capaz de encontrarla. Ni siquiera las paredes de
+este divino lugar pueden aliviar el peso que ahora se asienta en mi corazón.
+La magia de este lugar, siento que me esta llamando. En algún momento vendra
+por mi. Si alguien llega a encontrar mi cuerpo o este escrito, por favor
+vayase de aqui, porque ni siquiera yo, que me considero una experta en el
+HASAF RACTA, se que terminara pasando conmigo."
+	""",
+
+	"Vision estatuilla uno": """
+La tormenta lo esta devorando todo. Sus poderosos vientos arrancan las casas
+desde sus cimientos como si fueran hojas de arboles que salen volando ante la
+menor brisa. Tus hermanas siguen exigiendote que las acompañes para buscar un
+refugio, pero incluso en una situación de desastre, no puede abandonar tu
+oficio. 
+
+Como suma sacerdotisa del HASAF, tienes que velar por la seguridad de madre, y
+es por eso que incluso con el huracan debes encontrarla. Te diriges al interior
+del gran templo, y entonces...
+
+Despiertas despues de ese potente trance. ¿Qué fue eso? Sin embargo, se sintio
+demasiado cercano. Demasiado real... Recoges la estatuilla.
+	""",
+
+	"Vision estatuilla dos": """
+La pequeña corona hecha de conchas marinas es colocada ceremonialmente en tu
+cabeza por la antigua suma sacerdotisa de la aldea. Por el ritual de la RACTA
+ahora tu seras su sucesora. Te arrodillas ante ella, y comienzas a recitar las
+palabras que desde tu niñez tienes grabadas a fuego en tu memoria. 
+
+Hoy te conviertes en la mujer mas importante de la aldea, con excepción de
+Madre, y ahora tienes que cuidar a todas tus hermanas como tu destino siempre
+te ha indicado.
+
+¿Pero estas satisfecha con eso?
+
+Despiertas despues de ese potente trance. ¿Qué fue eso? Sin embargo, se sintio
+demasiado cercano. Demasiado real... Recoges la estatuilla.
+	""",
+
+	"Inicio buceo": """
+El agua es extremadamente fria al tacto, y resulta que si es mucho mas profunda
+de lo que esperabas. 
+
+Un extraño CORAL azulado ilumina la fosa, lo suficiente como para que puedas
+dislumbrar
+
+Una extraño par de TABLILLAS reposa en el fondo, junto con lo que parece ser
+otro CADAVER (¿por qué hay tantos?).
+
+Y finalmente, algo DORADO resplandece en la pared de la izquierda. Se ve que
+esta incrustado ahí. ¿Qué podría ser?
+""",
+
+	"Buceo coral": """
+El coral brilla con la misma intensidad que el gran cristal de la habitación
+central. Ese azul hipnotico, mistico, magico.
+
+Recuerdas a tu capitan sujetando un pedazo de roca similar al coral. 
+
+¿Acaso el sabia algo de este lugar?
+	""",
+
+	"Buceo tablillas": """
+Dos tablillas de piedra descansan hasta el fondo de la fosa.
+
+H B W S F   I R A M S
+F A O S M   M S L A S
+S F W N M   C F W S E
+D A M L C   N W E T N
+C O I F N   L X A B Z
+
+Parece que puedes pulsar algunos de los simbolos, uno por cada fila.
+Podrias intentar escribir algo con ellas.
+	""",
+
+	"Buceo cadaver": """
+Otro cadaver de una mujer, esta vez esta viscoso y cubierto de algas.
+Los trozos de tela adheridos a sus huesos ya no pueden ser considerados
+ropa, y faltan muchos huesos de su torax y parte inferior.
+
+Sin embargo, posee un objeto que no ha decaido como los demas. Un COLGANTE
+con forma de ojo refleja la luz del coral.
+
+Tal vez sea otro artefacto que deberias RECOGER.
+	""",
+
+	"Buceo dorado": """
+Una placa dorada esta incrustada en la pared de la fosa. Sus hermosos relieves
+hechos en oro no parecen haber envejecido un solo día.
+
+Notas una pequeña ranura para insertar algo en ella. ¿Quizás una llave?
+
+Tal vez se pueda ABRIR.
+	""",
+
+	"Maldicion collar": """
+El metal del oro que forma el collar pesa en tu cuello de manera... familiar.
+Una pequeña jaqueca te deja mareada- MAREADO de repente, como si algo estuviera
+golpeando tu craneo para abrirse paso a tu cerebro. Sea lo que sea, no parece
+que quieras volver a quitarte el collar.
+	"""
