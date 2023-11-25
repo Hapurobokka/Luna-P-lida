@@ -4,7 +4,7 @@ def movimiento_lab(cadena, inventario):
 	global posicion
 
 	if "Emblema calavera" in inventario and posicion == "centro":
-		print("Corto emblema calavera")
+		print(l_texto["Corto emblema calavera"])
 
 	match cadena:
 		case "primera":
@@ -12,18 +12,44 @@ def movimiento_lab(cadena, inventario):
 			print(l_texto["Corto buceo"])
 		case "segunda":
 			posicion = "segunda"
+			mostrar_alucionaciones()
 			print(l_texto["Corto ruinas"])
 		case "tercera":
 			posicion = "tercera"
+			mostrar_alucionaciones()
 			print(l_texto["Corto santuario"])
 		case "cuarta":
 			print("No implementado")
 		case "centro":
 			posicion = "centro"
+			mostrar_alucionaciones()
 			print(l_texto["Corto cristal"])	
 		case _:
 			print("¿A donde vas?")
 
+
+def mostrar_alucionaciones():
+	file = open("descripcion_dos_2.txt", "r")
+	if maldicion_collar is False:
+		return
+
+	match posicion:
+		case "segunda":
+			imprimir_descripcion(file, 5093, 8)
+		case "tercera":
+			imprimir_descripcion(file, 5320, 6)
+		case "centro":
+			imprimir_descripcion(file, 5581, 7)
+		case "buceando":
+			imprimir_descripcion(file, 5887, 7)
+		case "meditando":
+			imprimir_descripcion(file, 6136, 16)	
+		case "leyendo":
+			imprimir_descripcion(file, 6690, 4)
+		case _:
+			print("Si lees esto, ocurrio un error")
+
+	file.close()
 
 def inspecciones_centro(cadena, inventario):
 	file = open("descripcion_dos.txt", "r")
@@ -124,6 +150,8 @@ def recolecciones_lab(cadena, inventario):
 
 
 def descifrar_monoculo(cadena, inventario):
+	global posicion
+
 	file = open("descripcion_dos_2.txt", "r")	
 	if not ("Monoculo raro" in inventario):
 		print("¿Y como vas a hacer eso?")
@@ -133,7 +161,10 @@ def descifrar_monoculo(cadena, inventario):
 		case "inscripcion" if posicion == "centro":
 			imprimir_descripcion(file, 931, 7)
 		case "papeles" if posicion == "tercera":
+			posicion = "leyendo"
 			imprimir_descripcion(file, 1184, 9)
+			mostrar_alucionaciones()
+			posicion = "tercera"
 		case _:
 			print("¿Qué estas tratando de descifrar?")
 
@@ -158,12 +189,13 @@ def colocar_estatuilla(cadena, inventario):
 
 def miscelaneos_lab(clave, cadena, inventario):
 	file = open("descripcion_dos_2.txt", "r")
-	global maldicion_collar
+	global maldicion_collar, posicion
 
 	match clave:
 		case "descifrar":
 			descifrar_monoculo(cadena, inventario)
 		case "bucear" if posicion == "primera":
+			posicion = "buceando"
 			bucear(inventario)
 		case "entrar" if posicion == "segunda":
 			inspecciones_segunda("luz", inventario)
@@ -172,6 +204,10 @@ def miscelaneos_lab(clave, cadena, inventario):
 		case "ponerse" if cadena == "colgante":
 			imprimir_descripcion(file, 4779, 4)
 			maldicion_collar = True
+		case "meditar" if posicion == "tercera":
+			posicion = "meditando"
+			mostrar_alucionaciones()
+			posicion = "tercera"
 		case _:
 			print("¿Qué tratas de hacer?")
 
@@ -188,6 +224,7 @@ def inspecciones_buceo(cadena_b, inventario):
 			tablillas(inventario)
 		case "cadaver":
 			imprimir_descripcion(file, 4113, 6)
+			mostrar_alucionaciones()
 		case "dorado":
 			imprimir_descripcion(file, 4511, 6)
 		case _:
@@ -236,6 +273,7 @@ def tablillas(inventario):
 		print("No paso nada. Tal vez te equivocaste.")
 
 def bucear(inventario):
+	global posicion
 	file = open("descripcion_dos_2.txt", "r")
 	oxigeno = 3
 
@@ -260,6 +298,7 @@ def bucear(inventario):
 
 		elif clave_b == "emerger":
 			print("Sales inmediatamente a la superficie")
+			posicion = "primera"
 			break
 
 		oxigeno = oxigeno - 1
@@ -276,7 +315,7 @@ maldicion_collar = False
 
 posicion = "centro"
 
-claves_misc = ["bucear", "descifrar", "entrar", "colocar", "ponerse"]
+claves_misc = ["bucear", "descifrar", "entrar", "colocar", "ponerse", "meditar"]
 objetos_lab = [
 	"Monoculo raro",
 	"Colgante con forma de ojo",

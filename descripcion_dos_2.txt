@@ -142,3 +142,69 @@ Una pequeña jaqueca te deja mareada- MAREADO de repente, como si algo estuviera
 golpeando tu craneo para abrirse paso a tu cerebro. Sea lo que sea, no parece
 que quieras volver a quitarte el collar.
 	"""
+
+	"Alucionacion collar 1": """
+Una nueva voz sorprendida reverbera en tu mente.
+
+¿Qué le ha pasado al Gran Templo? ¿Donde han ido todos? Cuanto... ¿CUANTO
+TIEMPO HE ESTADO AUSENTE?
+
+Fui muy irresponsable...
+
+Porque...
+	"""
+
+	"Alucionacion collar 2": """
+Una voz nostalgica reverbera en tu mente.
+
+Solia... solia vivir aqui. ¿Pero porque esta todo tan desgastado? ¿No pudo
+haber sido hace tanto, verdad? Incluso mis notas estan aqui...
+
+Deberia quedarme un rato aqui a MEDITAR.
+	"""
+
+	"Alucionacion collar 3": """
+Una voz fascinada reverbera en tu mente.
+
+El Antiguo Cristal sigue en pie, a pesar de todo. Siempre me parecio poetico
+pensar que el Cristal iba a seguir aqui incluso milenios despues de que
+nosotras ya no estuvieramos.
+
+Pero verlo en persona es todo menos... agradable.
+	"""
+
+	"Alucinacion collar 4": """
+Una voz aterrada reverbera en tu mente.
+
+¿Esa... esa SOY YO? ¿Acaso este ha sido mi destino? Pero como es posible...
+
+¡¿Como es posible que a pesar de que mi cuerpo haya muerto yo siga aqui?!
+
+A no ser que...
+	"""
+
+	"Alucionacion collar 5": """
+Inhalo, exhalo.
+
+Soy una mujer fuerte, soy una mujer fuerte. Estoy orgullosa de mi cuidada
+apariencia, de mi largo cabello blanco, y de mi piel bronceada.
+
+Inhalo, exhalo.
+
+Estoy orgullosa de mi conocimiento, con el que empuje a mi pueblo a hacer
+descubirmientos que jamas podriamos imaginar.
+
+Inhalo, exhalo.
+
+Siento vergüenza de mi cobardia, porque por ella creo que todas las personas
+que amaba estan muertas. Y ahora no se si estoy viva o muerta. Pero tal vez...
+
+Tal vez hay una manera en la que puedo regresar.
+	"""
+
+	"Alucionacion collar 6": """
+
+Creo que tengo una teoria. Tal vez mi mente se quedo atrapada en este collar.
+Y si recuerdo bien... tal vez haya algo que contenga la imagen de mi cuerpo.
+¿Una estatuilla tal vez?
+	"""
