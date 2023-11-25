@@ -34,17 +34,17 @@ def mostrar_alucionaciones():
 
 	match posicion:
 		case "segunda":
-			imprimir_descripcion(file, 5093, 8)
+			imprimir_descripcion(file, 5092, 8)
 		case "tercera":
-			imprimir_descripcion(file, 5320, 6)
+			imprimir_descripcion(file, 5319, 6)
 		case "centro":
-			imprimir_descripcion(file, 5581, 7)
+			imprimir_descripcion(file, 5580, 5)
 		case "buceando":
-			imprimir_descripcion(file, 5887, 7)
+			imprimir_descripcion(file, 5886, 7)
 		case "meditando":
-			imprimir_descripcion(file, 6136, 16)	
+			imprimir_descripcion(file, 6135, 16)	
 		case "leyendo":
-			imprimir_descripcion(file, 6690, 4)
+			imprimir_descripcion(file, 6689, 4)
 		case _:
 			print("Si lees esto, ocurrio un error")
 
@@ -171,7 +171,7 @@ def descifrar_monoculo(cadena, inventario):
 
 	file.close()
 
-def colocar_estatuilla(cadena, inventario):
+def colocar_objetos(cadena, inventario):
 	file = open("descripcion_dos_2.txt", "r")
 	habitaciones_permitidas = ["segunda", "tercera"]
 
@@ -206,9 +206,9 @@ def miscelaneos_lab(clave, cadena, inventario):
 		case "entrar" if posicion == "segunda":
 			inspecciones_segunda("luz", inventario)
 		case "colocar":
-			colocar_estatuilla(cadena, inventario)
-		case "ponerse" if cadena == "colgante":
-			imprimir_descripcion(file, 4779, 4)
+			colocar_objetos(cadena, inventario)
+		case "ponerse" if cadena == "collar":
+			imprimir_descripcion(file, 4778, 4)
 			maldicion_collar = True
 		case "meditar" if posicion == "tercera":
 			posicion = "meditando"
@@ -232,7 +232,7 @@ def inspecciones_buceo(cadena_b, inventario):
 			imprimir_descripcion(file, 4113, 6)
 			mostrar_alucionaciones()
 		case "dorado":
-			imprimir_descripcion(file, 4511, 6)
+			imprimir_descripcion(file, 4510, 6)
 		case _:
 			print("¿Qué estas mirando?")
 
@@ -240,7 +240,7 @@ def inspecciones_buceo(cadena_b, inventario):
 
 def recolecciones_buceo(cadena_b, inventario):
 	file = open("descripcion_dos_2.txt", "r")
-	if cadena_b == "colgante":
+	if cadena_b == "collar":
 		imprimir_descripcion(file, 412, 5)
 		inventario.append("Colgante con forma de ojo")
 		objetos_lab.remove("Colgante con forma de ojo")
@@ -328,7 +328,7 @@ posicion = "centro"
 claves_misc = ["bucear", "descifrar", "entrar", "colocar", "ponerse", "meditar"]
 objetos_lab = [
 	"Monoculo raro",
-	"Colgante con forma de ojo",
+	"Collar con forma de ojo",
 	"Llave calavera",
 	"Emblema calavera"
 ]
