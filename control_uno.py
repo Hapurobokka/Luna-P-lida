@@ -10,24 +10,22 @@ def imprimir_inventario(inventario):
 		print(f" - {objeto}")
 
 def inspecciones_cue(cadena, inventario):
-	with open("descripcion_uno.txt", "r") as file:
-		if cadena == "cueva":
+	file = open("descripcion_uno.txt", "r")
+	match cadena:
+		case "cueva":
 			imprimir_descripcion(file, 21, 16)
-
-		elif cadena == "balsa":
+		case "balsa":
 			imprimir_descripcion(file, 625, 8)
-
-		elif cadena == "esqueleto":
+		case "esqueleto":
 			imprimir_descripcion(file, 1022, 10)
-
-		elif cadena == "animal":
+		case "animal":
 			imprimir_descripcion(file, 1441, 7)
-
-		elif cadena == "inventario":
+		case "inventario":
 			imprimir_inventario(inventario)
-
-		else:
+		case _:
 			print("Comando no reconocido")
+
+	file.close()
 
 		
 def recolecciones_cue(cadena, inventario):

@@ -10,7 +10,9 @@ def obtener_input():
 		return
 
 
-def trampas_uno(inventario, cueva_terminada):
+def trampas_uno(inventario):
+	global cueva_terminada
+	print(cueva_terminada)
 
 	while True:	
 		print("Selecciona una variable para modificar: ")
@@ -21,8 +23,7 @@ def trampas_uno(inventario, cueva_terminada):
 		print("Eventos:\n")
 		print("\t4. Animal furioso")
 		print("\t5. Pierna herida")
-		print("6. Pasar al laberinto")
-		print("7. Terminar trampas")
+		print("6. Terminar trampas")
 
 		seleccion = obtener_input()
 
@@ -40,8 +41,6 @@ def trampas_uno(inventario, cueva_terminada):
 		elif seleccion == 5:
 			d_bool["Pierna herida"] = False
 		elif seleccion == 6:
-			cueva_terminada = True
-		elif seleccion == 7:
 			break
 
 	return
@@ -86,7 +85,7 @@ def control_trampas(inventario):
 	habitacion = obtener_input()
 
 	if habitacion == 1:
-		trampas_uno(inventario, cueva_terminada)
+		trampas_uno(inventario)
 	elif habitacion == 2:
 		trampas_dos(inventario)
 	else:

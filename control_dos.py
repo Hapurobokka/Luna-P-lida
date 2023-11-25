@@ -187,31 +187,33 @@ def recolecciones_buceo(cadena_b, inventario):
 		print("¿Qué tratas de recoger?")
 
 def apertura_dorado(cadena_b, inventario):
-	if cadena_b == "dorado":
-		if "Llave calavera" in inventario:
-			print(l_texto["Descripcion emblema calavera"])
-			inventario.append("Emblema calavera")
-			objetos_lab.remove("Emblema calavera")
-			inventario.remove("Llave calavera")
-		elif not ("Llave calavera" in inventario) and (
-			"Emblema calavera" in objetos_lab):
-			print("¿Y como lo vas a abrir?")
-		else:
-			print("Ya tomaste todo lo habia aqui.")
+	if not cadena_b == "dorado":
+		print("¿Qué tratas de abrir?")
+		return
+	elif not "Emblema calavera" in objetos_lab:
+		print("Ya tomaste todo lo que habia aqui")
+		return
+	elif not "Llave calavera" in inventario:
+		print("¿Como lo vas a abrir?")
+		return
 
+	print(l_texto["Descripcion emblema calavera"])
+	inventario.append("Emblema calavera")
+	objetos_lab.remove("Emblema calavera")
+	inventario.remove("Llave calavera")
 
 def tablillas(inventario):
-	if "Llave calavera" in objetos_lab:
-		comb = input("Introduce la combinación\n>   ")
-		if comb == tablilla_comb:
-			print(l_texto["Descripcion llave"])
-			inventario.append("Llave calavera")
-			objetos_lab.remove("Llave calavera")
-		else:
-			print("No paso nada. Tal vez tu equivocaste.")
-
-	else:
+	if not "Llave calavera" in objetos_lab:
 		print("Ya tienes la llave, ¿qué mas quieres?")
+		return
+
+	comb = input("Introduce la combinación\n>   ")
+	if comb == tablilla_comb:
+		print(l_texto["Descripcion llave"])
+		inventario.append("Llave calavera")
+		objetos_lab.remove("Llave calavera")
+	else:
+		print("No paso nada. Tal vez te equivocaste.")
 
 def bucear(inventario):
 	oxigeno = 3
