@@ -1,4 +1,5 @@
-	"Descripcion monoculo": """
+# Descripcion monoculo
+
 Jamas habias tenido algo tan elegante en tus manos. O bueno, no de esta manera.
 Te cargaste a un riquillo o dos a lo largo de tus años en altamar, arrancando
 de sus lisas y elegantes manos cosas igual de valiosas que estas.
@@ -6,39 +7,39 @@ de sus lisas y elegantes manos cosas igual de valiosas que estas.
 Sin embargo, las circunstancias son diferentes.
 
 Este monoculo puede que marque la diferencia entre la vida y la muerte.
-	""",
 
-	"Descripcion colgante": """
+# Descripcion collar
+
 Jurarias haber visto la forma de ese ojo antes...
 
 ¿Por qué subitamente todo esto se te hace tan familiar?
 
 Un poco perturbado, te llevas el collar contigo.
-	""",
 
-	"Descripcion llave": """
+# Descripcion llave
+
 Una de las tablillas se abre como una pequeña puerta, revelando lo que parece
 ser una muy cuidada llave con forma de calavera.
 
 ¿Quizás abre algo importante?
-	""",
 
-	"Descripcion emblema calavera": """
+# Descripcion emblema calavera
+
 Un emblema con forma de calavera.
 
 Tal vez sirva para activar un mecanismo importante...
-	""",
 
-	"Inscripcion puerta": """
+# Inscripcion puerta
+
 A traves del monoculo raro, puedes descifrar la inscripción de la puerta:
 
 "Para abrir la puerta, debes encontrar el simbolo que representa el equilibrio
 de la vida y la muerte."
 
 Ahora tienes una pista de que debes hacer.
-	""",
 
-	"Texto papeles": """
+# Texto papeles
+
 A traves del monoculo raro, el texto se vuelve comprensible:
 
 "He fallado. A todas. No fui capaz de encontrarla. Ni siquiera las paredes de
@@ -47,9 +48,9 @@ La magia de este lugar, siento que me esta llamando. En algún momento vendra
 por mi. Si alguien llega a encontrar mi cuerpo o este escrito, por favor
 vayase de aqui, porque ni siquiera yo, que me considero una experta en el
 HASAF RACTA, se que terminara pasando conmigo."
-	""",
 
-	"Vision estatuilla uno": """
+# Vision estatuilla uno
+
 La tormenta lo esta devorando todo. Sus poderosos vientos arrancan las casas
 desde sus cimientos como si fueran hojas de arboles que salen volando ante la
 menor brisa. Tus hermanas siguen exigiendote que las acompañes para buscar un
@@ -62,9 +63,9 @@ del gran templo, y entonces...
 
 Despiertas despues de ese potente trance. ¿Qué fue eso? Sin embargo, se sintio
 demasiado cercano. Demasiado real... Recoges la estatuilla.
-	""",
 
-	"Vision estatuilla dos": """
+# Vision estatuilla dos
+
 La pequeña corona hecha de conchas marinas es colocada ceremonialmente en tu
 cabeza por la antigua suma sacerdotisa de la aldea. Por el ritual de la RACTA
 ahora tu seras su sucesora. Te arrodillas ante ella, y comienzas a recitar las
@@ -78,9 +79,9 @@ te ha indicado.
 
 Despiertas despues de ese potente trance. ¿Qué fue eso? Sin embargo, se sintio
 demasiado cercano. Demasiado real... Recoges la estatuilla.
-	""",
 
-	"Inicio buceo": """
+# Inicio buceo
+
 El agua es extremadamente fria al tacto, y resulta que si es mucho mas profunda
 de lo que esperabas. 
 
@@ -92,18 +93,18 @@ otro CADAVER (¿por qué hay tantos?).
 
 Y finalmente, algo DORADO resplandece en la pared de la izquierda. Se ve que
 esta incrustado ahí. ¿Qué podría ser?
-""",
 
-	"Buceo coral": """
+# Buceo coral
+
 El coral brilla con la misma intensidad que el gran cristal de la habitación
 central. Ese azul hipnotico, mistico, magico.
 
 Recuerdas a tu capitan sujetando un pedazo de roca similar al coral. 
 
 ¿Acaso el sabia algo de este lugar?
-	""",
 
-	"Buceo tablillas": """
+# Buceo tablillas
+
 Dos tablillas de piedra descansan hasta el fondo de la fosa.
 
 H B W S F   I R A M S
@@ -114,9 +115,9 @@ C O I F N   L X A B Z
 
 Parece que puedes pulsar algunos de los simbolos, uno por cada fila.
 Podrias intentar escribir algo con ellas.
-	""",
 
-	"Buceo cadaver": """
+# Buceo cadaver
+
 Otro cadaver de una mujer, esta vez esta viscoso y cubierto de algas.
 Los trozos de tela adheridos a sus huesos ya no pueden ser considerados
 ropa, y faltan muchos huesos de su torax y parte inferior.
@@ -125,25 +126,25 @@ Sin embargo, posee un objeto que no ha decaido como los demas. Un COLLAR
 con forma de ojo refleja la luz del coral.
 
 Tal vez sea otro artefacto que deberias RECOGER.
-	""",
 
-	"Buceo dorado": """
+# Buceo dorado
+
 Una placa dorada esta incrustada en la pared de la fosa. Sus hermosos relieves
 hechos en oro no parecen haber envejecido un solo día.
 
 Notas una pequeña ranura para insertar algo en ella. ¿Quizás una llave?
 
 Tal vez se pueda ABRIR.
-	""",
 
-	"Maldicion collar": """
+# Maldicion collar
+
 El metal del oro que forma el collar pesa en tu cuello de manera... familiar.
 Una pequeña jaqueca te deja mareada- MAREADO de repente, como si algo estuviera
 golpeando tu craneo para abrirse paso a tu cerebro. Sea lo que sea, no parece
 que quieras volver a quitarte el collar.
-	"""
 
-	"Alucionacion collar 1": """
+# Alucionacion collar 1
+
 Una nueva voz sorprendida reverbera en tu mente.
 
 ¿Qué le ha pasado al Gran Templo? ¿Donde han ido todos? Cuanto... ¿CUANTO
@@ -151,19 +152,19 @@ TIEMPO HE ESTADO AUSENTE?
 
 Fui muy irresponsable...
 
-Porque...
-	"""
+¿Porque..?
 
-	"Alucionacion collar 2": """
+# Alucionacion collar 2
+
 Una voz nostalgica reverbera en tu mente.
 
 Solia... solia vivir aqui. ¿Pero porque esta todo tan desgastado? ¿No pudo
 haber sido hace tanto, verdad? Incluso mis notas estan aqui...
 
 Deberia quedarme un rato aqui a MEDITAR.
-	"""
 
-	"Alucionacion collar 3": """
+# Alucionacion collar 3
+
 Una voz fascinada reverbera en tu mente.
 
 El Antiguo Cristal sigue en pie, a pesar de todo. Siempre me parecio poetico
@@ -171,9 +172,9 @@ pensar que el Cristal iba a seguir aqui incluso milenios despues de que
 nosotras ya no estuvieramos.
 
 Pero verlo en persona es todo menos... agradable.
-	"""
 
-	"Alucinacion collar 4": """
+# Alucinacion collar 4
+
 Una voz aterrada reverbera en tu mente.
 
 ¿Esa... esa SOY YO? ¿Acaso este ha sido mi destino? Pero como es posible...
@@ -181,9 +182,9 @@ Una voz aterrada reverbera en tu mente.
 ¡¿Como es posible que a pesar de que mi cuerpo haya muerto yo siga aqui?!
 
 A no ser que...
-	"""
 
-	"Alucionacion collar 5": """
+# Alucionacion collar 5
+
 Inhalo, exhalo.
 
 Soy una mujer fuerte, soy una mujer fuerte. Estoy orgullosa de mi cuidada
@@ -200,11 +201,15 @@ Siento vergüenza de mi cobardia, porque por ella creo que todas las personas
 que amaba estan muertas. Y ahora no se si estoy viva o muerta. Pero tal vez...
 
 Tal vez hay una manera en la que puedo regresar.
-	"""
 
-	"Alucionacion collar 6": """
+# Alucionacion collar 6
 
 Creo que tengo una teoria. Tal vez mi mente se quedo atrapada en este collar.
 Y si recuerdo bien... tal vez haya algo que contenga la imagen de mi cuerpo.
 ¿Una estatuilla tal vez?
-	"""
+
+# Alucionacion collar puerta calavera
+
+El juicio de los grandes me espera. Espero que aun me recuerden...
+
+# Aqui ira algo
