@@ -1,3 +1,5 @@
+from sys import exit
+
 def imprimir_descripcion(file, inicio, cantidad):
     file.seek(inicio)
     for _ in range(cantidad):
@@ -209,45 +211,37 @@ def recolecciones_buceo(cadena_b, inventario):
         print("¿Qué tratas de recoger?")
 
 def bucear(inventario):
-    global posicion
     file = open("descripcion_dos_2.txt", "r")
-    oxigeno = 3
+    buceo_fin = False
+    
+    accion = input("> ")
+    
+    try:
+        clave_b, cadena_b = accion.split(" ", 1)
+    except ValueError:
+        print("\nUn comando debe tener al menos dos palabras\n")
+        return
 
-    imprimir_descripcion(file, 2984, 13)
-
-    while True:
-        accion = input("> ")
-        try:
-            clave_b, cadena_b = accion.split(" ", 1)
-        except ValueError:
-            print("Un comando tiene que tener al menos dos palabras")
-            continue
-
-        if clave_b == "inspeccionar":
+    match clave_b:
+        case "inspeccionar":
             inspecciones_buceo(cadena_b, inventario)
-
-        elif clave_b == "recoger":
+        case "recoger":
             recolecciones_buceo(cadena_b, inventario)
-
-        elif clave_b == "abrir":
+        case "abrir": 
             apertura_dorado(cadena_b, inventario)
-
-        elif clave_b == "emerger":
-            print("\nSales inmediatamente a la superficie.\n")
-            posicion = "primera"
-            break
-
-        else:
+        case "emerger":
+            print("\nSales inmediatamente a la superficie\n")
+            buceo_fin = True
+        case "terminar" if cadena_b == "programa":
+            exit(0)
+        case _:
             print("Comando no reconocido")
 
-        oxigeno = oxigeno - 1
-
-        if oxigeno == 0:
-            print("\n¡Necesitas repirar! Sales inmediatamente a la superficie\n")
-            break
-
-    file.close()
-    return
+    if buceo_fin is False:
+        bucear(inventario)
+    else:
+        file.close()
+        return
 
 
 def movimiento_lab(cadena, inventario):
@@ -312,6 +306,7 @@ def miscelaneos_lab(clave, cadena, inventario):
             descifrar_monoculo(cadena, inventario)
         case "bucear" if posicion == "primera":
             posicion = "buceando"
+            imprimir_descripcion(file, 2984, 13)
             bucear(inventario)
             posicion = "primera"
         case "entrar" if posicion == "segunda":
