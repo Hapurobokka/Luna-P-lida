@@ -144,7 +144,7 @@ def colocar_objetos(cadena, inventario):
             inventario.remove("Emblema calavera")
             puerta_abierta = True
         case _:
-            print("Ups, algo fallo")
+            print("¿Qué tratas de colocar?")
 
     file.close()
     file2.close()
@@ -173,9 +173,9 @@ def tablillas(inventario):
         print("Ya tienes la llave, ¿qué mas quieres?")
         return
 
-    comb = input("Introduce la combinación\n>   ")
+    comb = input("Introduce la combinación\n> ")
     if comb == tablilla_comb:
-        imprimir_descripcion(file, 576, 6)
+        imprimir_descripcion(file, 574, 6)
         inventario.append("Llave calavera")
         objetos_lab.remove("Llave calavera")
     else:
@@ -233,7 +233,7 @@ def bucear(inventario):
             apertura_dorado(cadena_b, inventario)
 
         elif clave_b == "emerger":
-            print("Sales inmediatamente a la superficie.")
+            print("\nSales inmediatamente a la superficie.\n")
             posicion = "primera"
             break
 
@@ -243,7 +243,7 @@ def bucear(inventario):
         oxigeno = oxigeno - 1
 
         if oxigeno == 0:
-            print("¡Necesitas repirar! Sales inmediatamente a la superficie\n")
+            print("\n¡Necesitas repirar! Sales inmediatamente a la superficie\n")
             break
 
     file.close()
@@ -313,6 +313,7 @@ def miscelaneos_lab(clave, cadena, inventario):
         case "bucear" if posicion == "primera":
             posicion = "buceando"
             bucear(inventario)
+            posicion = "primera"
         case "entrar" if posicion == "segunda":
             inspecciones_segunda("luz", inventario)
         case "colocar":
