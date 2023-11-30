@@ -152,4 +152,18 @@ El sonido de las puertas abriendose lentamente reverbera por toda la estencia
 haciendote temblar hasta el centro de tu ser. Frente a ti, la incertidumbre de
 tu supervivencia espera su resolución.
 
+# Descripcion Grieta de los santos
 
+El agua gotea desde la cima de una inmensa grieta, aquella de la que todo este
+tiempo has intentado escapar. Escaleras de caracol talladas directamente en la 
+piedra son vigiladas en su camino hacia la luz por enormes ESTATUAS demasiado
+gastadas como para que puedas distinguir una forma humanoide en ellas.
+
+No hay nada mas que hacer aqui, mas que SUBIR a la LUZ.
+
+# Descripcion Estatuas 
+
+Son solo restos de lo que en algún momento pudo ser algo magnigico. Lastima
+que no puedas distinguir nada mas de ellas.
+
+# Aqui ira algo

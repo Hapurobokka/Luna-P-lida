@@ -9,46 +9,56 @@ def obtener_input():
         print("Solo numeros por favor")
         return
 
+def recibir_objeto(lista_obj, objeto, inventario):
+        try:
+            lista_obj.remove(objeto)
+            inventario.append(objeto)
+        except ValueError:
+            return print("Objeto no disponible")
 
 def trampas_uno(inventario):
-    global cueva_terminada
+    terminar = False
     print(cueva_terminada)
 
-    while True: 
-        print("Selecciona una variable para modificar: ")
-        print("Objetos:\n")
-        print("\t1. Estuatuilla recogida")
-        print("\t2. Tela recogida")
-        print("\t3. Papel recogido")
-        print("Eventos:\n")
-        print("\t4. Animal furioso")
-        print("\t5. Pierna herida")
-        print("6. Terminar trampas")
+    print("""
+Selecciona una variable para modificar:
 
-        seleccion = obtener_input()
+Objetos:
+    1. Estuatuilla de oro
+    2. Trozo de tela
+    3. Mapa de la Isla
 
-        if seleccion == 1:
-            inventario.append("Estatuilla de oro")
-            d_lista["Objetos cueva"].remove("Estatuilla de oro")
-        elif seleccion == 2:
-            inventario.append("Trozo de tela")
-            d_lista["Objetos cueva"].remove("Trozo de tela")
-        elif seleccion == 3:
-            inventario.append("Mapa de la Isla")
-            d_lista["Objetos cueva"].remove("Mapa de la Isla")
-        elif seleccion == 4:
+Eventos:
+    4. Animal furioso
+    5. Pierna herida
+
+6. Terminar trampas
+        """)
+    seleccion = obtener_input()
+
+    match seleccion:
+        case 1:
+            recibir_objeto(d_lista["Objetos cueva"], "Estatuilla de oro", inventario)
+        case 2:
+            recibir_objeto(d_lista["Objetos cueva"], "Trozo de tela", inventario)
+        case 3:
+            recibir_objeto(d_lista["Objetos cueva"], "Mapa de la Isla", inventario)
+        case 4:
             d_bool["Animal furioso"] = False
-        elif seleccion == 5:
+        case 5:
             d_bool["Pierna herida"] = False
-        elif seleccion == 6:
-            break
+        case 6:
+            terminar = True
 
-    return
+    if terminar is False:
+        trampas_uno(inventario)
+    else:
+        return
 
 def trampas_dos(inventario):
-    while True:
-        print("Selecciona una variable para modificar: ")
-        print("""
+    terminar = False
+    print("Selecciona una variable para modificar: ")
+    print("""
 Objetos:
     1. Monoculo raro
     2. Collar con forma de ojo
@@ -56,26 +66,26 @@ Objetos:
     4. Emblema calavera
 
 5. Terminar trampas
-            """)
+        """)
 
-        seleccion = obtener_input()
+    seleccion = obtener_input()
 
-        if seleccion == 1:
-            inventario.append("Monoculo raro")
-            objetos_lab.remove("Monoculo raro")
-        elif seleccion == 2:
-            inventario.append("Collar con forma de ojo")
-            objetos_lab.remove("Collar con forma de ojo")
-        elif seleccion == 3:
-            inventario.append("Llave calavera")
-            objetos_lab.append("Llave calavera")
-        elif seleccion == 4:
-            inventario.append("Emblema calavera")
-            objetos_lab.remove("Emblema calavera")
-        elif seleccion == 5:
-            break
-
-    return
+    match seleccion:
+        case 1:
+            recibir_objeto(objetos_lab, "Monoculo raro", inventario)
+        case 2:
+            recibir_objeto(objetos_lab, "Collar con forma de ojo", inventario)
+        case 3:
+            recibir_objeto(objetos_lab, "Llave calavera", inventario)
+        case 4:
+            recibir_objeto(objetos_lab, "Emblema calavera", inventario)
+        case 5:
+            terminar = True
+    
+    if terminar is False:
+        trampas_dos(inventario)
+    else:
+        return
 
 def control_trampas(inventario):
     print("Elija una habitación que trampear: ")

@@ -29,6 +29,8 @@ def mostrar_alucionaciones():
             imprimir_descripcion(file, 5937, 18)    
         case "leyendo":
             imprimir_descripcion(file, 6481, 5)
+        case "salida":
+            imprimir_descripcion(file, 6800, 4)
         case _:
             print("Si lees esto, ocurrio un error")
 
@@ -93,6 +95,20 @@ def inspecciones_tercera(cadena, inventario):
             imprimir_descripcion(file, 5207, 5)
         case "fuente":
             imprimir_descripcion(file, 5453, 11)
+        case "inventario":
+            imprimir_inventario(inventario)
+        case _:
+            print("¿Qué estas mirando?")
+
+    file.close()
+
+def inspecciones_salida(cadena, inventario):
+    file = open("descripcion_dos.txt", "r")
+    match cadena:
+        case "habitacion":
+            imprimir_descripcion(file, 6130, 8)
+        case "estatuas":
+            imprimir_descripcion(file, 6521, 4)
         case "inventario":
             imprimir_inventario(inventario)
         case _:
@@ -220,7 +236,7 @@ def bucear(inventario):
         clave_b, cadena_b = accion.split(" ", 1)
     except ValueError:
         print("\nUn comando debe tener al menos dos palabras\n")
-        return
+        return bucear(inventario)
 
     match clave_b:
         case "inspeccionar":
@@ -244,6 +260,25 @@ def bucear(inventario):
         return
 
 
+def juicio_puertas(inventario):
+    file = open("descripcion_dos_2.txt", "r")
+    estatuilla_prohibida = "Estatuilla de oro" in inventario
+    cuerpo_corrupto = maldicion_collar is True
+    cuerpo_purificado = False
+
+    if estatuilla_prohibida and cuerpo_corrupto:
+        imprimir_descripcion(file, 6912, 11)
+        input()
+        imprimir_descripcion(file, 7343, 12)
+        input()
+        imprimir_descripcion(file, 7752, 14)
+        input()
+        exit(0)
+    else:
+        pass
+
+    file.close()
+
 def movimiento_lab(cadena, inventario):
     global posicion
 
@@ -265,6 +300,10 @@ def movimiento_lab(cadena, inventario):
             posicion = "centro"
             mostrar_alucionaciones()
             print(l_texto["Corto cristal"]) 
+        case "salida":
+            posicion = "salida"
+            mostrar_alucionaciones()
+            print(l_texto["Corto salida"])
         case _:
             print("¿A donde vas?")
 
@@ -282,6 +321,8 @@ def inspecciones_lab(cadena, inventario):
             inspecciones_segunda(cadena, inventario)
         case "tercera":
             inspecciones_tercera(cadena, inventario)
+        case "salida":
+            inspecciones_salida(cadena, inventario)
 
 
 def recolecciones_lab(cadena, inventario):
@@ -320,6 +361,8 @@ def miscelaneos_lab(clave, cadena, inventario):
             posicion = "meditando"
             mostrar_alucionaciones()
             posicion = "tercera"
+        case "subir" if posicion == "salida":
+            juicio_puertas(inventario)
         case _:
             print("¿Qué tratas de hacer?")
 
@@ -331,7 +374,8 @@ maldicion_collar = False
 
 posicion = "centro"
 
-claves_misc = ["bucear", "descifrar", "entrar", "colocar", "ponerse", "meditar"]
+claves_misc = ["bucear", "descifrar", "entrar", "colocar", "ponerse", 
+               "meditar", "subir"]
 objetos_lab = [
     "Monoculo raro",
     "Collar con forma de ojo",
@@ -376,4 +420,9 @@ El silencio sepulcral de unas inmensas ruinas te saluda.
     "Corto santuario": """
 El rumor relajante del agua te indica que puedes bajar tu guardia un momento.
     """,
+
+    "Corto salida": """
+Largas escaleras esperan tu ascenso a un cielo nocturno sin estrellas. 
+Aqui termina todo.
+    """
 }
