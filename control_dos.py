@@ -264,7 +264,6 @@ def juicio_puertas(inventario):
     file = open("descripcion_dos_2.txt", "r")
     estatuilla_prohibida = "Estatuilla de oro" in inventario
     cuerpo_corrupto = maldicion_collar is True
-    cuerpo_purificado = False
 
     if estatuilla_prohibida and cuerpo_corrupto:
         imprimir_descripcion(file, 6912, 11)
@@ -273,11 +272,18 @@ def juicio_puertas(inventario):
         input()
         imprimir_descripcion(file, 7752, 14)
         input()
+        file.close()
         exit(0)
     else:
-        pass
+        imprimir_descripcion(file, 8279, 5)
+        input()
+        imprimir_descripcion(file, 8511, 5)
+        input()
+        imprimir_descripcion(file, 8753, 9)
+        input()
+        file.close()
+        exit(0)
 
-    file.close()
 
 def movimiento_lab(cadena, inventario):
     global posicion
