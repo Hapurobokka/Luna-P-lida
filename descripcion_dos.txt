@@ -1,16 +1,48 @@
 # Descripción cristal
 
 Lo primero que notas es la gran puerta dorada, la cual tiene una especie de
-agujero donde se puede insertar algo. A su lado, se encuentra una inscripción
-en un lenguaje que no conoces, pero de alguna manera, puedes entender.
-
-"Para abrir la puerta, debes encontrar el simbolo que representa el equilibrio
-de la vida y la muerte."
+agujero donde se puede insertar algo. A su lado, se encuentra una INSCRIPCIÓN 
+en un lenguaje que no conoces.
 
 Hay al menos unos cuatro pasillos que nacen de esta habitación. Quizás deberias
 comenzar a inspeccionar en ellos.
 
 Podrias intentar MOVERTE a la PRIMERA, SEGUNDA, TERCERA, o CUARTA habitación.
+
+Hay otras cosas que ver por aqui.
+
+RESTOS EXTRAÑOS descansan al lado de la puerta, tal vez contengan una pista.
+Tambien hay un MURAL que te llama mucho la atención, pues sientes que tambien
+eres capaz de entenderlo.
+
+En cualquier caso, deberias tratar de INSPECCIONARLOS.
+
+# Descripción INSCRIPCIÓN
+
+Unos glifos extraños cubren la puerta. Puede que digan algo importante, ¿pero
+como vas a DESCRIFRARLA? Tal vez haya un objeto que pueda ayudarte a hacerlo.
+
+# Descripción RESTOS EXTRAÑOS
+
+Con la potente iluminación es imposible que ese bulto pueda esconderse de ti.
+Cubierto con una extraña tela, el cadaver de una mujer con ropajes exoticos te
+devuelve una hueca mirada.
+
+Su carne podrida y su apestoso olor te provocan nauseas, tus ojos lloran un 
+poco. Pero despues de recuperarte del shock, te das cuenta de que ella tiene
+en su mano izquiera una especie de MONOCULO RARO, el cual tiene su lente hecha
+del mismo cristal que ahora te alumbra. 
+
+Quizás deberias RECOGERLO.
+
+# Descripción MURAL
+
+Un mural que simboliza a un grupo de seres humanos sellando a una legión de
+serpientes bajo tierra. A pesar de que se parecen mucho a los esclavos que
+has visto en venta en las ciudades, cuentan con una tecnología extraña que
+no sabrias describir.
+
+Algo te dice que no deberias estar viendo esto.
 
 # Descripción buceo
 
@@ -23,3 +55,115 @@ es lo que vas a hacer.
 (Para bucear, usa el comando BUCEAR. Cuando quieras regresar a la superficie,
 usa el comando EMERGER)
 
+# Descripción Ruinas
+
+Pilares derrumbados y restos de lo que alguna vez fue una magnifica estructura
+llenan una amplia caverna. Entre las piedras desgastadas y los escombros
+dispersos, destaca una ESTATUA parcialmente conservada que representa figuras
+misteriosas y seres mitológicos en un baile eterno.
+
+Una fuerte brisa serpentea entre las GRIETAS de las paredes, llevando consigo
+una especie de historia oculta que casi sientes que puedes sostener con tus
+propias manos.
+
+# Descripcion ESTATUA
+
+Seres alados danzan en un torbellino rodeados por creaturas mitológicas, cada
+movimiento capturado con elegancia en la estática de la piedra.
+
+Uno de los seres alados, una hermosa mujer, sostiene algo en alto, iluminado
+debilmente por la luz que emite el cristal de la habitación del centro.
+
+Un craneo, un craneo que parece ser el que esta movilizando al resto de seres.
+
+# Descripción GRIETAS
+
+Las grietas en las paredes están marcadas por el paso inexorable del tiempo,
+serpenteando como arterias entrelazadas en la estructura de piedra. Aunque
+aparentemente comunes, algunas de estas grietas parecen divergir sutilmente de
+las otras, formando un patrón sutil que sigue una dirección particular.
+
+Entre estas grietas singulares, destaca una más ancha y profunda, pareciendo
+albergar un brillo casi imperceptible. Si se observa detenidamente, se percibe
+una tenue luminiscencia que emana de su interior, como si algo resplandeciera
+en las profundidades ocultas de la grieta. Esta LUZ apenas perceptible
+destella ocasionalmente, como una débil estrella atrapada en la oscuridad
+de la piedra antigua.
+
+Deberias ENTRAR a la LUZ.
+
+# Descripción luz
+
+La luz te daña los ojos por un instante, pero cuando consigues atravesarla,
+solo encuentras oscuridad.
+
+¿A donde se fue?
+
+Un pedestal yace en el centro de una muy pequeña habitación cuadrada. Parece
+llevar aqui, esperando a que se le COLOQUE algo encima. ¿Tendras algo que
+COLOCAR ahi?
+
+# Descripcion santuario
+
+Esta habitación se presenta como un santuario envejecido por el paso del tiempo.
+Los TAPICES que alguna vez fueron ricos en color ahora muestran señales de
+desgaste y desvanecimiento.
+
+Un pequeño ESCRITORIO tallado en piedra sigue en pie, a pesar de todo, y hay
+unos PAPELES desperdigados por su superficie.
+
+En un rincón, una pequeña FUENTE de agua sigue su ritmo constante, aunque su
+caudal es más sosegado, emitiendo un suave murmullo que se entremezcla con la
+quietud del ambiente. El sonido del agua, apenas audible, se convierte en una
+melodía tranquila que invita a la introspección y la relajación en este lugar
+gastado por el tiempo, pero impregnado de calma y serenidad.
+
+# Descripción TAPICES
+
+Los vivos colores de los que estaban hechos estos tapices han sido arrebatados
+por el paso del tiempo. Su ahora aspera superficie guarda la que pudo haber
+sido la sabiduría de una gran civilización. ¿Pero a ti que te importa?
+
+Eres solo un criminal tratando de sobrevivir. No es como si te fueran a salvar.
+Pero es... triste, pensar en lo que se pudo ir con ellos. ¿Por qué te esta
+poniendo esto tan melancolico?
+
+# Descripción ESCRITORIO
+
+Sorpredentemente, los PAPELES no se han desintegrado con los años. No entiendes
+ni una sola palabra de lo que hay escrito en ellos, pero se parece bastante al
+lenguaje que estaba escrito en la puerta que tratas de abrir.
+
+# Descripción FUENTE
+
+El sonido del agua se siente... relajante. Sereno y tranquilo, tienes muchas
+ganas de solo recostarte y descansar. Pero debes seguir adelante, algo te dice
+que en cualquier momento algo saldra de entre las grietas de este complejo e
+ira por ti. 
+
+Oculto entre la fuente, un PEDESTAL en el que puedes COLOCAR algo reposa, como
+esperando a que algo finalmente ocupo su lugar en el. 
+
+¿Tienes algo que poner ahí?
+
+# Descripcion puerta abierta
+
+El sonido de las puertas abriendose lentamente reverbera por toda la estencia
+haciendote temblar hasta el centro de tu ser. Frente a ti, la incertidumbre de
+tu supervivencia espera su resolución.
+
+# Descripcion Grieta de los santos
+
+El agua gotea desde la cima de una inmensa grieta, aquella de la que todo este
+tiempo has intentado escapar. Escaleras de caracol talladas directamente en la 
+piedra son vigiladas en su camino hacia la luz por enormes ESTATUAS demasiado
+gastadas como para que puedas distinguir una forma humanoide en ellas.
+
+No hay nada mas que hacer aqui, mas que SUBIR a la LUZ.
+
+# Descripcion Estatuas 
+
+Son solo restos de lo que en algún momento pudo ser algo magnigico. Lastima
+que no puedas distinguir nada mas de ellas.
+
+# Aqui ira algo

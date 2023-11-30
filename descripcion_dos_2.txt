@@ -1,0 +1,282 @@
+# Descripcion monoculo
+
+Jamas habias tenido algo tan elegante en tus manos. O bueno, no de esta manera.
+Te cargaste a un riquillo o dos a lo largo de tus años en altamar, arrancando
+de sus lisas y elegantes manos cosas igual de valiosas que estas.
+
+Sin embargo, las circunstancias son diferentes.
+
+Este monoculo puede que marque la diferencia entre la vida y la muerte.
+
+# Descripcion collar
+
+Jurarias haber visto la forma de ese ojo antes...
+
+¿Por qué subitamente todo esto se te hace tan familiar?
+
+Un poco perturbado, te llevas el collar contigo.
+
+# Descripcion llave
+
+Una de las tablillas se abre como una pequeña puerta, revelando lo que parece
+ser una muy cuidada llave con forma de calavera.
+
+¿Quizás abre algo importante?
+
+# Descripcion emblema calavera
+
+Un emblema con forma de calavera.
+
+Tal vez sirva para activar un mecanismo importante...
+
+# Inscripcion puerta
+
+A traves del monoculo raro, puedes descifrar la inscripción de la puerta:
+
+"Para abrir la puerta, debes encontrar el simbolo que representa el equilibrio
+de la vida y la muerte."
+
+Ahora tienes una pista de que debes hacer.
+
+# Texto papeles
+
+A traves del monoculo raro, el texto se vuelve comprensible:
+
+"He fallado. A todas. No fui capaz de encontrarla. Ni siquiera las paredes de
+este divino lugar pueden aliviar el peso que ahora se asienta en mi corazón.
+La magia de este lugar, siento que me esta llamando. En algún momento vendra
+por mi. Si alguien llega a encontrar mi cuerpo o este escrito, por favor
+vayase de aqui, porque ni siquiera yo, que me considero una experta en el
+HASAF RACTA, se que terminara pasando conmigo."
+
+# Vision estatuilla uno
+
+La tormenta lo esta devorando todo. Sus poderosos vientos arrancan las casas
+desde sus cimientos como si fueran hojas de arboles que salen volando ante la
+menor brisa. Tus hermanas siguen exigiendote que las acompañes para buscar un
+refugio, pero incluso en una situación de desastre, no puede abandonar tu
+oficio. 
+
+Como suma sacerdotisa del HASAF, tienes que velar por la seguridad de madre, y
+es por eso que incluso con el huracan debes encontrarla. Te diriges al interior
+del gran templo, y entonces...
+
+Despiertas despues de ese potente trance. ¿Qué fue eso? Sin embargo, se sintio
+demasiado cercano. Demasiado real... Recoges la estatuilla.
+
+# Vision estatuilla dos
+
+La pequeña corona hecha de conchas marinas es colocada ceremonialmente en tu
+cabeza por la antigua suma sacerdotisa de la aldea. Por el ritual de la RACTA
+ahora tu seras su sucesora. Te arrodillas ante ella, y comienzas a recitar las
+palabras que desde tu niñez tienes grabadas a fuego en tu memoria. 
+
+Hoy te conviertes en la mujer mas importante de la aldea, con excepción de
+Madre, y ahora tienes que cuidar a todas tus hermanas como tu destino siempre
+te ha indicado.
+
+¿Pero estas satisfecha con eso?
+
+Despiertas despues de ese potente trance. ¿Qué fue eso? Sin embargo, se sintio
+demasiado cercano. Demasiado real... Recoges la estatuilla.
+
+# Inicio buceo
+
+El agua es extremadamente fria al tacto, y resulta que si es mucho mas profunda
+de lo que esperabas. 
+
+Un extraño CORAL azulado ilumina la fosa, lo suficiente como para que puedas
+dislumbrar
+
+Una extraño par de TABLILLAS reposa en el fondo, junto con lo que parece ser
+otro CADAVER (¿por qué hay tantos?).
+
+Y finalmente, algo DORADO resplandece en la pared de la izquierda. Se ve que
+esta incrustado ahí. ¿Qué podría ser?
+
+# Buceo coral
+
+El coral brilla con la misma intensidad que el gran cristal de la habitación
+central. Ese azul hipnotico, mistico, magico.
+
+Recuerdas a tu capitan sujetando un pedazo de roca similar al coral. 
+
+¿Acaso el sabia algo de este lugar?
+
+# Buceo tablillas
+
+Dos tablillas de piedra descansan hasta el fondo de la fosa.
+
+H B W S F   I R A M S
+F A O S M   M S L A S
+S F W N M   C F W S E
+D A M L C   N W E T N
+C O I F N   L X A B Z
+
+Parece que puedes pulsar algunos de los simbolos, uno por cada fila.
+Podrias intentar escribir algo con ellas.
+
+# Buceo cadaver
+
+Otro cadaver de una mujer, esta vez esta viscoso y cubierto de algas.
+Los trozos de tela adheridos a sus huesos ya no pueden ser considerados
+ropa, y faltan muchos huesos de su torax y parte inferior.
+
+Sin embargo, posee un objeto que no ha decaido como los demas. Un COLLAR 
+con forma de ojo refleja la luz del coral.
+
+Tal vez sea otro artefacto que deberias RECOGER.
+
+# Buceo dorado
+
+Una placa dorada esta incrustada en la pared de la fosa. Sus hermosos relieves
+hechos en oro no parecen haber envejecido un solo día.
+
+Notas una pequeña ranura para insertar algo en ella. ¿Quizás una llave?
+
+Tal vez se pueda ABRIR.
+
+# Maldicion collar
+
+El metal del oro que forma el collar pesa en tu cuello de manera... familiar.
+Una pequeña jaqueca te deja mareada- MAREADO de repente, como si algo estuviera
+golpeando tu craneo para abrirse paso a tu cerebro. Sea lo que sea, no parece
+que quieras volver a quitarte el collar.
+
+# Alucionacion collar 1
+
+Una nueva voz sorprendida reverbera en tu mente.
+
+¿Qué le ha pasado al Gran Templo? ¿Donde han ido todos? Cuanto... ¿CUANTO
+TIEMPO HE ESTADO AUSENTE?
+
+Fui muy irresponsable...
+
+¿Porque..?
+
+# Alucionacion collar 2
+
+Una voz nostalgica reverbera en tu mente.
+
+Solia... solia vivir aqui. ¿Pero porque esta todo tan desgastado? ¿No pudo
+haber sido hace tanto, verdad? Incluso mis notas estan aqui...
+
+Deberia quedarme un rato aqui a MEDITAR.
+
+# Alucionacion collar 3
+
+Una voz fascinada reverbera en tu mente.
+
+El Antiguo Cristal sigue en pie, a pesar de todo. Siempre me parecio poetico
+pensar que el Cristal iba a seguir aqui incluso milenios despues de que
+nosotras ya no estuvieramos.
+
+Pero verlo en persona es todo menos... agradable.
+
+# Alucinacion collar 4
+
+Una voz aterrada reverbera en tu mente.
+
+¿Esa... esa SOY YO? ¿Acaso este ha sido mi destino? Pero como es posible...
+
+¡¿Como es posible que a pesar de que mi cuerpo haya muerto yo siga aqui?!
+
+A no ser que...
+
+# Alucionacion collar 5
+
+Inhalo, exhalo.
+
+Soy una mujer fuerte, soy una mujer fuerte. Estoy orgullosa de mi cuidada
+apariencia, de mi largo cabello blanco, y de mi piel bronceada.
+
+Inhalo, exhalo.
+
+Estoy orgullosa de mi conocimiento, con el que empuje a mi pueblo a hacer
+descubirmientos que jamas podriamos imaginar.
+
+Inhalo, exhalo.
+
+Siento vergüenza de mi cobardia, porque por ella creo que todas las personas
+que amaba estan muertas. Y ahora no se si estoy viva o muerta. Pero tal vez...
+
+Tal vez hay una manera en la que puedo regresar.
+
+# Alucionacion collar 6
+
+Creo que tengo una teoria. Tal vez mi mente se quedo atrapada en este collar.
+Y si recuerdo bien... tal vez haya algo que contenga la imagen de mi cuerpo.
+¿Una estatuilla tal vez?
+
+# Alucionacion collar puerta calavera
+
+El juicio de los grandes me espera. Espero que aun me recuerden...
+
+# Alucionacion collar salida
+
+Y como dictan las profecias, nuestros cielos perdieron su bellaza. Que los 
+dioses nos salven.
+
+# Final malo 1
+
+En la cima de las escaleras, una gran muralla se levanta separando la grieta
+de lo que sea que este resguardado tras sus puertas. Dos estatuas gigantes
+vigilan las puertas, con una expresión implacable.
+
+Entre mas te acercas a ellos, mas te comienza a doler la cabeza. Aquel collar
+que llevas colgado, que tantos pensamientos extraños te ha provocado, comienza
+a brillar. Y entonces...
+
+Y entonces...
+
+(pausa para pulsar enter)
+
+Los Gigantes me miran como si fuera una extraña para ellos, y probablemente lo
+sea. Atrapada en un cuerpo que no me corresponde, intentado encontrar una sola
+respuesta.
+
+Me arrodillo ante ellos, y alzo la manos hacia la Luna.
+
+"¡He vuelto grandes Guardianes! Su hija prodiga, la sacerdotisa ha regresado
+a casa!"
+
+Sin embargo, me observan sin respuesta. Las puertas no se abren.
+
+(pausa para pulsar enter)
+
+Un rayo cae del cielo, y me atraviesa de arriba abajo. Me quema el cuerpo,
+hace cenizas mi carne, me provoca un dolor que solo senti el dia que mori.
+
+Los gigantes han hablado, no me reconocen.
+
+No podre volver y descansar de nuevo en la casa que me vio crecer. No sabre
+que le paso a las hermanas que tanto ame.
+
+Tumbada en la arena de la playa, las olas funcionan como un suave arrullo que
+me acompaña hasta el momento que dejo de respirar.
+
+Y lo ultimo que veo antes de dejar este mundo son las estrellas.
+
+# Final malo 2
+
+En la cima de las escaleras, una gran muralla se levanta separando la grieta
+de lo que sea que este resguardado tras sus puertas. Dos estatuas gigantes
+vigilan las puertas, con una expresión implacable.
+
+(pausa para pulsar enter)
+
+Cuando te detienes a sus pies, su inmensidad es tan abrumadora que no puedes
+hacer otra cosa que no sea arrodillarte. Las estatuas te miran curiosas, pero
+eventualmente su mirada se convierte en una de hostilidad.
+
+(pausa para pulsar enter)
+
+Un inmenso rugido se escuchar desde los cielos, y rayo te parte en dos. Tu
+cuerpo es reducido a nada mas que cenizas. ¿Por qué yo?, te preguntas.
+
+La verdad es que siempre tuviste otro proposito, una misión que cumplir.
+
+El problema es que eres TU, y no ELLA. Y cuando comprendes esa verdad, lo unico
+que te queda es llorar bajo las estrellas.
+
+# Aqui termina este archivo
